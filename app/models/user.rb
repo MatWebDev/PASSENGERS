@@ -6,8 +6,8 @@ class User < ApplicationRecord
 
   validates :first_name, :last_name, :phone_number, :address, presence: true
   has_one :freelancer
-  has_many :projects
+  has_many :projects, dependent: :destroy
   has_many :collaborations, through: :projects
-  has_many :messages
+  has_many :messages, dependent: :destroy
   ROLE = ['freelancer', 'customer'].freeze
 end
