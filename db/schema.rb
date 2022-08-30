@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_30_130217) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_30_143936) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -49,38 +49,21 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_30_130217) do
 
   create_table "collaborations", force: :cascade do |t|
     t.string "status"
+    t.bigint "user_id", null: false
     t.bigint "project_id", null: false
-    t.bigint "freelancer_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["freelancer_id"], name: "index_collaborations_on_freelancer_id"
     t.index ["project_id"], name: "index_collaborations_on_project_id"
+    t.index ["user_id"], name: "index_collaborations_on_user_id"
   end
 
   create_table "elements", force: :cascade do |t|
+    t.string "content"
     t.integer "price"
     t.bigint "quote_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "content"
     t.index ["quote_id"], name: "index_elements_on_quote_id"
-  end
-
-  create_table "freelancers", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "email"
-    t.string "phone_number"
-    t.string "address"
-    t.string "siret"
-    t.text "description"
-    t.integer "number_of_projects"
-    t.date "batch_date"
-    t.bigint "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "price_per_day"
-    t.index ["user_id"], name: "index_freelancers_on_user_id", unique: true
   end
 
   create_table "messages", force: :cascade do |t|
@@ -104,19 +87,19 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_30_130217) do
 
   create_table "quotes", force: :cascade do |t|
     t.integer "total_price"
-    t.bigint "freelancer_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["freelancer_id"], name: "index_quotes_on_freelancer_id"
+    t.index ["user_id"], name: "index_quotes_on_user_id"
   end
 
   create_table "skills", force: :cascade do |t|
     t.string "title"
     t.integer "rating"
-    t.bigint "freelancer_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["freelancer_id"], name: "index_skills_on_freelancer_id"
+    t.index ["user_id"], name: "index_skills_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -133,19 +116,22 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_30_130217) do
     t.string "address"
     t.string "company_name"
     t.string "role"
+    t.string "siret"
+    t.text "description"
+    t.integer "number_of_projects"
+    t.date "batch_date"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "collaborations", "freelancers"
   add_foreign_key "collaborations", "projects"
+  add_foreign_key "collaborations", "users"
   add_foreign_key "elements", "quotes"
-  add_foreign_key "freelancers", "users"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
   add_foreign_key "projects", "users"
-  add_foreign_key "quotes", "freelancers"
-  add_foreign_key "skills", "freelancers"
+  add_foreign_key "quotes", "users"
+  add_foreign_key "skills", "users"
 end
