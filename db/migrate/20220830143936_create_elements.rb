@@ -1,8 +1,7 @@
 class CreateElements < ActiveRecord::Migration[7.0]
   def change
     create_table :elements do |t|
-      t.string :title
-      t.text :description
+      t.string :content
       t.integer :price
       t.references :quote, null: false, foreign_key: true
 

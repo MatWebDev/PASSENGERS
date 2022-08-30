@@ -5,9 +5,15 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :first_name, :last_name, :phone_number, :address, presence: true
-  has_one :freelancer
+  validates :siret, :description, :number_of_projects, :batch_date, presence: true, if: :freelancer?
   has_many :projects, dependent: :destroy
-  has_many :collaborations, through: :projects
+  has_many :collaborations, dependent: :destroy
   has_many :messages, dependent: :destroy
+  has_many :quotes, dependent: :destroy
+  has_many :skills, dependent: :destroy
   ROLE = ['freelancer', 'customer'].freeze
+
+  def freelancer?
+    user.role == "freelancer"
+  end
 end
