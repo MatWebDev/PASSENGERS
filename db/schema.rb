@@ -10,13 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_30_114405) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_30_121218) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "chatrooms", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "collaborations", force: :cascade do |t|
+    t.string "status"
+    t.bigint "project_id", null: false
+    t.bigint "freelancer_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["freelancer_id"], name: "index_collaborations_on_freelancer_id"
+    t.index ["project_id"], name: "index_collaborations_on_project_id"
   end
 
   create_table "elements", force: :cascade do |t|
@@ -55,23 +65,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_30_114405) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
-  create_table "offers", force: :cascade do |t|
+  create_table "projects", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_offers_on_user_id"
-  end
-
-  create_table "projects", force: :cascade do |t|
-    t.boolean "status"
-    t.bigint "offer_id", null: false
-    t.bigint "freelancer_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["freelancer_id"], name: "index_projects_on_freelancer_id"
-    t.index ["offer_id"], name: "index_projects_on_offer_id"
+    t.index ["user_id"], name: "index_projects_on_user_id"
   end
 
   create_table "quotes", force: :cascade do |t|
@@ -109,13 +109,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_30_114405) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "collaborations", "freelancers"
+  add_foreign_key "collaborations", "projects"
   add_foreign_key "elements", "quotes"
   add_foreign_key "freelancers", "users"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
-  add_foreign_key "offers", "users"
-  add_foreign_key "projects", "freelancers"
-  add_foreign_key "projects", "offers"
+  add_foreign_key "projects", "users"
   add_foreign_key "quotes", "freelancers"
   add_foreign_key "skills", "freelancers"
 end

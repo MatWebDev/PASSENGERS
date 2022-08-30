@@ -1,4 +1,4 @@
 class Project < ApplicationRecord
-  belongs_to :offer
-  belongs_to :freelancer
+  belongs_to :user
+  validates :title, :description, presence: true
 end

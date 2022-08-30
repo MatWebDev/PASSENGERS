@@ -1,6 +1,6 @@
-class CreateOffers < ActiveRecord::Migration[7.0]
+class CreateProjects < ActiveRecord::Migration[7.0]
   def change
-    create_table :offers do |t|
+    create_table :projects do |t|
       t.string :title
       t.text :description
       t.references :user, null: false, foreign_key: true

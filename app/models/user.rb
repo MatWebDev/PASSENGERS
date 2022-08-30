@@ -6,7 +6,8 @@ class User < ApplicationRecord
 
   validates :first_name, :last_name, :phone_number, :address, presence: true
   has_one :freelancer
-  has_many :offers
+  has_many :projects
+  has_many :collaborations, through: :projects
   has_many :messages
-  has_many :projects, through: :offers
+  ROLE = ['freelancer', 'customer'].freeze
 end
