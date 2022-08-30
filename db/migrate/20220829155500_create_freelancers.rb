@@ -10,7 +10,7 @@ class CreateFreelancers < ActiveRecord::Migration[7.0]
       t.text :description
       t.integer :number_of_projects
       t.date :batch_date
-      t.references :user, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true, index: { unique: true }
 
       t.timestamps
     end
