@@ -11,6 +11,7 @@ class User < ApplicationRecord
   has_many :messages, dependent: :destroy
   has_many :quotes, dependent: :destroy
   has_many :skills, dependent: :destroy
+  has_one_attached :photo
   ROLE = ['freelancer', 'customer'].freeze
 
   def freelancer?
