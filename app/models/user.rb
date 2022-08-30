@@ -14,6 +14,6 @@ class User < ApplicationRecord
   ROLE = ['freelancer', 'customer'].freeze
 
   def freelancer?
-    user.role == "freelancer"
+    self.role == "freelancer"
   end
 end
