@@ -6,16 +6,16 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :projects do
-    resources :collaborations
+    resources :collaborations, only: :create
   end
 
-  resources :skills
-
-  resources :quotes do
-    resources :elements
+  resources :quotes, only: %i[show new create destroy] do
+    resources :elements, only: %i[create destroy]
   end
 
   resources :chatrooms, only: :show do
     resources :messages, only: :create
   end
+
+  get 'dashboard', to: "pages#dashboard"
 end

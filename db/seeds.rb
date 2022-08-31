@@ -12,7 +12,8 @@ user = User.new(
   siret: '123 456 789 00018',
   number_of_projects: 42,
   batch_date: '2015-12-01',
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+  skills: ['ruby']
 )
 user.photo.attached(io: file, filename: 'marilou.jpg', content_type: 'image/jpeg')
 user.save!
@@ -29,7 +30,8 @@ user = User.new(
   siret: '456 789 123 00018',
   number_of_projects: 20,
   batch_date: '2020-10-13',
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+  skills: ['ruby']
 )
 user.photo.attached(io: file, filename: 'guillaume.jpg', content_type: 'image/jpeg')
 user.save!
@@ -46,7 +48,8 @@ user = User.new(
   siret: '123 789 456 00018',
   number_of_projects: 5,
   batch_date: '2022-02-02',
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+  skills: ['ruby']
 )
 user.photo.attached(io: file, filename: 'jerome.jpg', content_type: 'image/jpeg')
 user.save!
@@ -63,7 +66,8 @@ user = User.new(
   siret: '789 123 456 00018',
   number_of_projects: 272,
   batch_date: '2010-04-21',
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+  skills: ['ruby']
 )
 user.photo.attached(io: file, filename: 'mathieu.jpg', content_type: 'image/jpeg')
 user.save!
