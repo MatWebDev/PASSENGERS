@@ -9,10 +9,6 @@ Rails.application.routes.draw do
     resources :collaborations, only: :create
   end
 
-  resources :quotes, only: %i[show new create destroy] do
-    resources :elements, only: %i[create destroy]
-  end
-
   resources :chatrooms, only: :show do
     resources :messages, only: :create
   end
