@@ -1,4 +1,10 @@
 class CollaborationsController < ApplicationController
+  def new
+    @user = current_user
+    @project = Project.find(params[:project_id])
+    @collaboration = Collaboration.new
+  end
+
   def create
     @user = current_user
     @collaboration = Collaboration.new(params_collaboration)
