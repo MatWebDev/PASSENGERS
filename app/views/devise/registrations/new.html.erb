@@ -4,6 +4,27 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+  
+      <%= f.input :first_name,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "Prénom" }%>
+      <%= f.input :last_name,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "Nom" }%>
+        <%= f.input :phone_number,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "Numéro de téléphone" }%>
+            <%= f.input :address,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "Adresse" }%>
+        <%= f.input :company_name,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "Société" }%>
     <%= f.input :email,
                 required: true,
                 autofocus: true,
@@ -15,6 +36,26 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
+    <%= f.input :siret,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "Numero de siret" }%>
+    <%= f.input :description,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "décrivez votre parcours" }%>
+    <%= f.input :number_of_projects,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "Nombre de projets réalisés" }%>
+    <%= f.input :batch_date,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "Numero de batch" }%>
+    <%= f.input :skills,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "skills" }%>
   </div>
 
   <div class="form-actions">
