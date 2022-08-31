@@ -1,4 +1,5 @@
 User.destroy_all
+Project.destroy_all
 
 file = URI.open('https://avatars.githubusercontent.com/u/105067544?v=4')
 user = User.new(
@@ -84,3 +85,26 @@ User.create!(
 )
 
 puts 'Users created successfully man!'
+
+Project.create!(
+  title: "e-shop creation for JM company",
+  description: "I need an e-shop for my company, I don't know anything about web development, please help me!",
+  answers: ['creation', 'eshop under 10 items'],
+  user_id: User.find_by(first_name: 'Jean-Michel').id
+)
+
+Project.create!(
+  title: "One Page website",
+  description: "I need a one page website for my company, I don't know anything about web development, please help me!",
+  answers: ['creation', 'one page'],
+  user_id: User.find_by(first_name: 'Jean-Michel').id
+)
+
+Project.create!(
+  title: "Big eshop",
+  description: "We need a big eshop to sale different products in several categories. We don't have development department so we need a freelancer!",
+  answers: ['creation', 'eshop over 10 items'],
+  user_id: User.find_by(first_name: 'Jean-Michel').id
+)
+
+puts 'Projects created successfully man!'
