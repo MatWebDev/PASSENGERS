@@ -24,6 +24,7 @@ class CollaborationsController < ApplicationController
     when 'declined'
       @collaboration.update(status: 'declined')
     end
+    redirect_to dashboard_path
   end
 
   private
