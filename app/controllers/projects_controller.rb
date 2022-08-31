@@ -8,10 +8,11 @@ class ProjectsController < ApplicationController
   end
 
   def new
-
+    @project = Project.new
   end
 
   def create
+    @project = Project.new(project_params)
 
   end
 
@@ -25,5 +26,11 @@ class ProjectsController < ApplicationController
 
   def destroy
 
+  end
+
+  private
+
+  def project_params
+    params.require(:project).permit()
   end
 end
