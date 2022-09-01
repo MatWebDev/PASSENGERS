@@ -97,7 +97,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_143446) do
     t.string "siret"
     t.text "description"
     t.integer "number_of_projects"
-    t.date "batch_date"
+    t.date "year_exp"
     t.integer "score_exp"
     t.string "skills", default: [], array: true
     t.index ["email"], name: "index_users_on_email", unique: true
