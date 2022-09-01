@@ -11,8 +11,7 @@ class User < ApplicationRecord
   has_many :messages, dependent: :destroy
   has_one_attached :photo
   before_save :experience, if: :freelancer?
-  ROLE = ['freelancer', 'customer'].freeze
-
+  ROLE = ["freelancer", "customer"].freeze
 
   def freelancer?
     self.role == "freelancer"
