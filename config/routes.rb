@@ -14,5 +14,4 @@ Rails.application.routes.draw do
   end
 
   get 'dashboard', to: "pages#dashboard"
-  get 'selectionfreelancers', to: "pages#selectionfreelancers"
 end
