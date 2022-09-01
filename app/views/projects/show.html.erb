@@ -1,1 +1,22 @@
 <%= link_to "Accueil", root_path %>
+<h1><%= @project.title %></h1>
+<p><%= @project.description %></p>
+<p><%= @project.user.first_name %></p>
+<% case @project.score_difficulty %>
+<% when 1 %>
+    <% @junior_freelancers.each do |freelancer| %>
+    <p><%= freelancer.first_name %></p>
+  <% end %>
+<% when 2 %>
+  <% @junior_intermediate_freelancers.each do |freelancer| %>
+    <p><%= freelancer.first_name %></p>
+  <% end %>
+<% when 3 %>
+  <% @intermediate_freelancers.each do |freelancer| %>
+    <p><%= freelancer.first_name %></p>
+  <% end %>
+<% when 4 %>
+  <% @senior_freelancers.each do |freelancer| %>
+    <p><%= freelancer.first_name %></p>
+  <% end %>
+<% end %>
