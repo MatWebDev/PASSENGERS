@@ -22,6 +22,6 @@ class User < ApplicationRecord
     # p self.year_exp
     # p self.number_of_projects
     # p self.skills.size
-    self.score_exp = (self.year_exp * 5) + (self.number_of_projects * 2) + self.skills.size
+    self.score_exp = (self.year_exp * 7) + (self.number_of_projects * 2)
   end
 end
