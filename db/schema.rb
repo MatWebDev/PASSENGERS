@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_01_125152) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_01_131051) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -81,6 +81,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_01_125152) do
     t.index ["user_id"], name: "index_projects_on_user_id"
   end
 
+  create_table "skills", force: :cascade do |t|
+    t.string "name"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_skills_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -99,7 +107,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_01_125152) do
     t.text "description"
     t.integer "number_of_projects"
     t.integer "score_exp", default: 0
-    t.string "skills", default: [], array: true
     t.integer "year_exp"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
@@ -112,4 +119,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_01_125152) do
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
   add_foreign_key "projects", "users"
+  add_foreign_key "skills", "users"
 end
