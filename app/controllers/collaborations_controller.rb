@@ -1,18 +1,18 @@
 class CollaborationsController < ApplicationController
   def new
-    @user = current_user
     @project = Project.find(params[:project_id])
     @collaboration = Collaboration.new
   end
 
   def create
-    @user = current_user
+    @project = Project.find(params[:project_id])
     @collaboration = Collaboration.new(params_collaboration)
-    @project = @collaboration.project
+    @collaboration.project = @project
+    @collaboration.user_id = current_user.id
     if @collaboration.save
       redirect_to dashboard_path
     else
-      render project_path(@project), status: :unprocessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -30,6 +30,6 @@ class CollaborationsController < ApplicationController
   private
 
   def params_collaboration
-    params.require(:collaboration).permit(:status, :title, :total_price)
+    params.require(:collaboration).permit(:status, :title, :total_price, :project_id)
   end
 end
