@@ -9,6 +9,7 @@ class PagesController < ApplicationController
 
   def dashboard
     @collaborations = Collaboration.where(user_id: current_user.id)
+    @projects = Project.where(user_id: current_user.id)
   end
 
   # def selectionfreelancers

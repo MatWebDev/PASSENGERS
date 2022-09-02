@@ -1,2 +1,7 @@
 <%= link_to "Accueil", root_path %>
-<%= render "shared/dashboard_freelancer" %>
+<% case current_user.role %>
+  <% when 'freelancer' %>
+    <%= render "shared/dashboard_freelancer" %>
+  <% when 'customer' %>
+    <%= render "shared/dashboard_customer" %>
+<% end %>

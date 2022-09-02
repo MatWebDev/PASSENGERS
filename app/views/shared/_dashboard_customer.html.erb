@@ -1,2 +1,12 @@
+<div class="d-flex"><h1>Welcome <%= current_user.first_name %> <%= current_user.last_name %></h1></div>
+<% @projects.each do |project| %>
+  <div class="free-card">
+      <h2><%= project.title %></h2>
+      <p><%= project.description %></p>
+      <%= link_to "Delete Project", project_path(project), data: {turbo_method: :delete} %>
+  </div>
+<% end %>
 <%= link_to "Submit New Project", new_project_path%>
-<%# <%= link_to "Delete Project", project_path, data: {turbo_method: :delete} %> %>
+
+
+
