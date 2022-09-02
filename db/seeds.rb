@@ -341,6 +341,25 @@ user = User.new(
 user.photo.attached(io: file, filename: 'mathieu.jpg', content_type: 'image/jpeg')
 user.save!
 
+file = URI.open('https://avatars.githubusercontent.com/u/102875112?v=4')
+user = User.new(
+  role: 'freelancer',
+  first_name: 'Dylane',
+  last_name: 'DeMarseille',
+  email: 'dmrs@test.com',
+  password: '123456',
+  phone_number: '0612345673',
+  address: 'Noumea',
+  siret: '123 789 456 00018',
+  number_of_projects: 5,
+  year_exp: 1,
+  description: "Freshly graduated from Epitech, I'm a bit of a jack-of-all-trades.
+  I have a strong appetite for functional projects even if I have a lot of experience in technical projects.
+  I can work on web development projects (fullstack: Backend in Python and Frontend in js) as well as on IS architecture in AGILE method. I like working independently and I adapt very easily to a new work group.
+  I'm more successful on python in back-end web development.",
+  skills: ['ruby', 'python', 'wordpress', 'html'],
+  # score_exp: 19
+
 User.create!(
   role: 'customer',
   first_name: 'Jean-Michel',
