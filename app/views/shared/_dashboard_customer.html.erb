@@ -1,11 +1,16 @@
 <div class="d-flex"><h1>Welcome <%= current_user.first_name %> <%= current_user.last_name %></h1></div>
-<% @projects.each do |project| %>
-  <div class="free-card">
-      <h2><%= project.title %></h2>
-      <p><%= project.description %></p>
-      <%= link_to "Delete Project", project_path(project), data: {turbo_method: :delete} %>
-  </div>
-<% end %>
+<div class="cartes">
+  <% @projects.each do |project| %>
+    <%= link_to project_path(project) do %>
+    
+      <div class="carte">
+        <h2><%= project.title %></h2>
+        <p><%= project.description %></p>
+        <%= link_to "Delete Project", project_path(project), data: {turbo_method: :delete} %>
+        </div>
+    <% end %>
+  <% end %>
+</div>
 <%= link_to "Submit New Project", new_project_path%>
 
 
