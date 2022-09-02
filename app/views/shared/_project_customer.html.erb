@@ -1,0 +1,44 @@
+<div class="freelancer-cards">
+
+    <% case @project.score_difficulty %>
+    <% when 1 %>
+        <% @junior_freelancers.each do |freelancer| %>
+  <div class="free-card">
+        <p><%= freelancer.first_name %></p>
+        <%# ajouter photo %>
+        <p><%= freelancer.skills.join(", ") %></p>
+        <p><%= freelancer.description %></p>
+  </div>
+      <% end %>
+
+    <% when 2 %>
+      <% @junior_intermediate_freelancers.each do |freelancer| %>
+  <div class="free-card">
+        <p><%= freelancer.first_name %></p>
+        <%# ajouter photo %>
+        <p><%= freelancer.skills.join(", ") %></p>
+        <p><%= freelancer.description %></p>
+  </div>
+      <% end %>
+
+    <% when 3 %>
+      <% @intermediate_freelancers.each do |freelancer| %>
+  <div class="free-card">
+        <p><%= freelancer.first_name %></p>
+        <%# ajouter photo %>
+        <p><%= freelancer.skills.join(", ") %></p>
+        <p><%= freelancer.description %></p>
+  </div>
+      <% end %>
+
+    <% when 4 %>
+      <% @senior_freelancers.each do |freelancer| %>
+  <div class="free-card">
+        <p><strong><%= freelancer.first_name %></strong></p>
+        <%# ajouter photo %>
+        <p><%= freelancer.skills.join(", ") %></p>
+        <p><em><%= freelancer.description %></em></p>
+  </div>
+      <% end %>
+    <% end %>
+</div>
