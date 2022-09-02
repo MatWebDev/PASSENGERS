@@ -1,44 +1,56 @@
-<div class="freelancer-cards">
+<div class="cartes">
+  <h3>Take a look at this Freelancers selection powered by Passengers</h3>
 
-    <% case @project.score_difficulty %>
-    <% when 1 %>
-        <% @junior_freelancers.each do |freelancer| %>
-  <div class="free-card">
-        <p><%= freelancer.first_name %></p>
+  <% case @project.score_difficulty %>
+  <% when 1 %>
+    <% @junior_freelancers.each do |freelancer| %>
+      <div class="carte">
+        <p><strong><%= freelancer.first_name %> <%= freelancer.last_name %></strong></p>
         <%# ajouter photo %>
         <p><%= freelancer.skills.join(", ") %></p>
         <p><%= freelancer.description %></p>
-  </div>
-      <% end %>
+      </div>
+  <% end %>
 
-    <% when 2 %>
-      <% @junior_intermediate_freelancers.each do |freelancer| %>
-  <div class="free-card">
-        <p><%= freelancer.first_name %></p>
+  <% when 2 %>
+    <% @junior_intermediate_freelancers.each do |freelancer| %>
+      <div class="carte">
+        <p><strong><%= freelancer.first_name %> <%= freelancer.last_name %></strong></p>
         <%# ajouter photo %>
         <p><%= freelancer.skills.join(", ") %></p>
         <p><%= freelancer.description %></p>
-  </div>
-      <% end %>
+      </div>
+  <% end %>
 
-    <% when 3 %>
-      <% @intermediate_freelancers.each do |freelancer| %>
-  <div class="free-card">
-        <p><%= freelancer.first_name %></p>
+  <% when 3 %>
+    <% @intermediate_freelancers.each do |freelancer| %>
+      <div class="carte">
+        <p><strong><%= freelancer.first_name %> <%= freelancer.last_name %></strong></p>
         <%# ajouter photo %>
         <p><%= freelancer.skills.join(", ") %></p>
         <p><%= freelancer.description %></p>
-  </div>
-      <% end %>
+      </div>
+  <% end %>
 
-    <% when 4 %>
-      <% @senior_freelancers.each do |freelancer| %>
-  <div class="free-card">
-        <p><strong><%= freelancer.first_name %></strong></p>
+  <% when 4 %>
+    <% @senior_freelancers.each do |freelancer| %>
+      <div class="carte">
+        <p><strong><%= freelancer.first_name %> <%= freelancer.last_name %></strong></p>
         <%# ajouter photo %>
         <p><%= freelancer.skills.join(", ") %></p>
         <p><em><%= freelancer.description %></em></p>
-  </div>
-      <% end %>
+      </div>
     <% end %>
+  <% end %>
+
+  <h3>Collaborations</h3>
+<div class="cartes">
+    <% @collaborations.each do |collaboration| %>
+      <div class="carte">
+        <%= collaboration.title %>
+        <%= collaboration.total_price %>
+        <%= collaboration.status %>
+      </div>
+    <% end %>
+    </div>
 </div>

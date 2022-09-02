@@ -13,6 +13,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+    @collaborations = Collaboration.where(project_id: @project.id)
     # a verifier
     freelancers = User.where(role: 'freelancer')
     @junior_freelancers = []
