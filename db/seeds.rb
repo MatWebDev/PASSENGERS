@@ -359,6 +359,9 @@ user = User.new(
   I'm more successful on python in back-end web development.",
   skills: ['ruby', 'python', 'wordpress', 'html'],
   # score_exp: 19
+)
+user.photo.attached(io: file, filename: 'mathieu.jpg', content_type: 'image/jpeg')
+user.save!
 
 User.create!(
   role: 'customer',
