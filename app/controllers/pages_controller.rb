@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @projects = Project.where(user_id: current_user.id)
   end
 
   # def selectionfreelancers
