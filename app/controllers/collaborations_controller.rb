@@ -17,14 +17,10 @@ class CollaborationsController < ApplicationController
   end
 
   def update
+    project = Project.find(params[:project_id])
     @collaboration = Collaboration.find(params[:id])
-    case params[:status]
-    when 'accepted'
-      @collaboration.update(status: 'accepted')
-    when 'declined'
-      @collaboration.update(status: 'declined')
-    end
-    redirect_to dashboard_path
+    @collaboration.update(status: 'accepted')
+    redirect_to project_path(project)
   end
 
   private
