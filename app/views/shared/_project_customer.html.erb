@@ -50,6 +50,7 @@
         <%= collaboration.title %>
         <%= collaboration.total_price %>
         <%= collaboration.status %>
+        <%= link_to "Accept collab", project_collaboration_path(collaboration), data: {turbo_method: :patch} %>
       </div>
     <% end %>
     </div>
