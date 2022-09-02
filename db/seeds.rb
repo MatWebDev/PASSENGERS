@@ -122,4 +122,12 @@ Project.create!(
   score_difficulty: 4
 )
 
+Project.create!(
+  title: "Webapp JM&Fils",
+  description: "We need a web app but we don't know why.",
+  answers: ['creation', 'webapp'],
+  user_id: User.find_by(first_name: 'Jean-Michel').id,
+  score_difficulty: 4
+)
+
 puts 'Projects created successfully man!'

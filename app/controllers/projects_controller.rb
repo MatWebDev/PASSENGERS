@@ -1,13 +1,12 @@
 class ProjectsController < ApplicationController
   def index
-    user = current_user
-    year_exp = Date.today - user.batch_date
-    user.score_exp = (year_exp * 5) + (user.number_of_projects * 2) + user.skill.size
-    if user.score_exp <= 33
+    @user = current_user
+    @user.score_exp = (@user.year_exp * 7) + (@user.number_of_projects * 2)
+    if @user.score_exp <= 33
       @projects = Project.where(score_difficulty: 1..2)
-    elsif user.score_exp > 33 && user.score_exp <= 66
+    elsif @user.score_exp > 33 && @user.score_exp <= 66
       @projects = Project.where(score_difficulty: 2..3)
-    elsif user.score_exp > 66
+    elsif @user.score_exp > 66
       @projects = Project.where(score_difficulty: 4)
     end
   end
