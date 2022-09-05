@@ -47,11 +47,12 @@
 <div class="cartes">
     <% @collaborations.each do |collaboration| %>
       <div class="carte">
+        <%= collaboration.user.first_name %>
+        <%= collaboration.user.last_name %>
         <%= collaboration.title %>
         <%= collaboration.total_price %>
-        <%= collaboration.status %>
-        <%= link_to "Accept collab", project_collaboration_path(collaboration), data: {turbo_method: :patch} %>
+        <%= collaboration.status.capitalize %>
+        <%= link_to "Accept", project_collaboration_path(@project, collaboration), data: {status: "accepted", turbo_method: :put} %>
       </div>
     <% end %>
-    </div>
 </div>
