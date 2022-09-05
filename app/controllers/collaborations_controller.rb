@@ -20,7 +20,7 @@ class CollaborationsController < ApplicationController
     @project = Project.find(params[:project_id])
     @collaboration = Collaboration.find(params[:id])
     @collaboration.update(status: 'accepted')
-    redirect_to project_path(@project)
+    redirect_to root_path
   end
 
   private
