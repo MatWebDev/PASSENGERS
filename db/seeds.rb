@@ -1,5 +1,6 @@
 User.destroy_all
 Project.destroy_all
+Chatroom.destroy_all
 
 file = URI.open('https://avatars.githubusercontent.com/u/105067544?v=4')
 user = User.new(
@@ -417,3 +418,7 @@ Project.create!(
 )
 
 puts 'Projects created successfully man!'
+
+Chatroom.create!(name: "Chatroom")
+
+puts 'Chatroom created successfully man!'
