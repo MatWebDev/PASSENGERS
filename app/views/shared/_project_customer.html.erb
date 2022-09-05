@@ -57,6 +57,7 @@
         <%= collaboration.total_price %>
         <%= collaboration.status.capitalize %>
         <%= link_to "Accept", project_collaboration_path(@project, collaboration), data: {turbo_method: :patch} %>
+        <%= link_to "Decline", project_collaboration_path(@project, collaboration), data: { turbo_method: :delete} %>
       </div>
     <% end %>
 </div>
