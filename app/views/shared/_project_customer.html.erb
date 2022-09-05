@@ -52,7 +52,7 @@
         <%= collaboration.title %>
         <%= collaboration.total_price %>
         <%= collaboration.status.capitalize %>
-        <%= link_to "Accept collaboration", project_collaboration_path(@project, collaboration), data: {status: "accepted", turbo_method: :put} %>
+        <%= link_to "Accept", project_collaboration_path(@project, collaboration), data: {status: "accepted", turbo_method: :put} %>
       </div>
     <% end %>
 </div>
