@@ -23,6 +23,13 @@ class CollaborationsController < ApplicationController
     redirect_to root_path
   end
 
+  def destroy
+    @project = Project.find(params[:project_id])
+    @collaboration = Collaboration.find(params[:id])
+    @collaboration.destroy
+    redirect_to project_path(@project)
+  end
+
   private
 
   def params_collaboration
