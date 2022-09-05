@@ -56,8 +56,10 @@
         <%= collaboration.title %>
         <%= collaboration.total_price %>
         <%= collaboration.status.capitalize %>
+        <% if collaboration.status == 'pending' %>
         <%= link_to "Accept", project_collaboration_path(@project, collaboration), data: {turbo_method: :patch} %>
-        <%= link_to "Decline", project_collaboration_path(@project, collaboration), data: { turbo_method: :delete} %>
+        <%= link_to "Decline", root_path  %>
+        <% end %>
       </div>
     <% end %>
 </div>
