@@ -49,9 +49,8 @@
       <div class="carte">
         <%= collaboration.title %>
         <%= collaboration.total_price %>
-        <%= collaboration.status %>
-        <%= link_to "Accept collab", project_collaboration_path(collaboration), data: {turbo_method: :patch} %>
+        <%= collaboration.status.capitalize %>
+        <%= link_to "Accept collab", project_collaboration_path(@project, collaboration), data: {status: "accepted", turbo_method: :put} %>
       </div>
     <% end %>
-    </div>
 </div>
