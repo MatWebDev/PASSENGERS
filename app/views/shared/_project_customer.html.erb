@@ -9,6 +9,7 @@
         <%# ajouter photo %>
         <p><%= freelancer.skills.join(", ") %></p>
         <p><%= freelancer.description %></p>
+        <%= link_to "Contact", chatroom_path(id: 1) %>
       </div>
   <% end %>
 
@@ -19,6 +20,7 @@
         <%# ajouter photo %>
         <p><%= freelancer.skills.join(", ") %></p>
         <p><%= freelancer.description %></p>
+        <%= link_to "Contact", chatroom_path(id: 1) %>
       </div>
   <% end %>
 
@@ -29,6 +31,7 @@
         <%# ajouter photo %>
         <p><%= freelancer.skills.join(", ") %></p>
         <p><%= freelancer.description %></p>
+        <%= link_to "Contact", chatroom_path(id: 1) %>
       </div>
   <% end %>
 
@@ -39,6 +42,7 @@
         <%# ajouter photo %>
         <p><%= freelancer.skills.join(", ") %></p>
         <p><em><%= freelancer.description %></em></p>
+        <%= link_to "Contact", chatroom_path(id: 1) %>
       </div>
     <% end %>
   <% end %>
