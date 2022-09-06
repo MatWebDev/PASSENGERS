@@ -1,6 +1,10 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  position: absolute;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +13,61 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+// ----------------------------------------------------------------NOTRE NAV --------------------------------------------------------
+
+
+.navpassengers {
+  top: 0;
+  position: absolute;
+  z-index: 99;
+  color: white;
+  width: 100vw;
+
+
+  ul{
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    font-family: Poppins;
+    height: 25px;
+    text-align: center;
+  }
+  a{
+    text-decoration: none;
+    padding: 0 15px;
+    color: white;
+
+  }
+ a::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 0%;
+    height: 2px;
+    background-color: #f1f1f1;
+    transition: width 0.2s ease-in-out;
+    -webkit-transition: width 0.2s ease-in-out;
+    -moz-transition: width 0.2s ease-in-out;
+    -ms-transition: width 0.2s ease-in-out;
+    -o-transition: width 0.2s ease-in-out;
+}
+
+a:hover::after {
+    width: 100%;
+}
+.log{
+  background-color: #272222;
+  color: white;
+  padding: 4px 4px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+}
 }

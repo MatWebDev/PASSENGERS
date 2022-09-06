@@ -39,21 +39,22 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @user = current_user
     @project = Project.new(project_params)
+    @project.user_id = current_user.id
 
-    if @project.answers.include?('one page' || 'vitrine')
+    case @project.website
+    when 'One Page', 'Vitrine'
       @project.score_difficulty = 1
-    elsif @project.answers.include?('eshop under 10 items')
+    when 'E-shop under 10 items'
       @project.score_difficulty = 2
-    elsif @project.answers.include?('eshop over 10 items')
+    when 'E-shop over 10 items'
       @project.score_difficulty = 3
-    elsif @project.answers.include?('webapp')
+    when 'WebApp'
       @project.score_difficulty = 4
     end
 
     if @project.save
-      redirect_to selectionfreelancers_path
+      redirect_to project_path(@project)
     else
       render :new, status: :unprocessable_entity
     end
@@ -74,6 +75,6 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title, :description, :answers, :user_id)
+    params.require(:project).permit(:title, :description, :user_id, :origin, :website, :score_difficulty)
   end
 end

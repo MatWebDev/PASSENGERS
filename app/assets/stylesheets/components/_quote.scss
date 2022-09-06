@@ -1,0 +1,33 @@
+.quote {
+  width: 110vh;
+  height: 90vh;
+  padding: 160px;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 3.95px 3.95px 4.6px;
+  position: relative;
+
+  h2 {
+    text-align: center;
+  }
+}
+.quote-image {
+  width: 70%;
+  height: 90vh;
+  position: absolute;
+  right: 0px;
+  opacity: 80%;
+}
+
+
+.form-control{
+  border-style: none;
+  border-bottom: solid 1px grey;
+  background-color: rgba(128, 128, 128, 0.078);
+  margin-bottom: 40px;
+  margin-top: 20px;
+  width: 130%;
+}
+
+.form-wrapper {
+  margin-top: 50px;
+}

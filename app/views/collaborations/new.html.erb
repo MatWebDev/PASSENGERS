@@ -1,22 +1,19 @@
-<div class="form-container">
-    <h2 class="text-center mb-4">Send a quote for this project</h2>
-    <div class="container">
-      <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
-        <%= simple_form_for [@project, @collaboration] do |f| %>
-          <%= f.input :title,
+<%= image_tag('quote.jpg', class: "quote-image") %>
+
+<div class="quote">
+  <h2>Send a quote for this project</h2>
+  <div class="form-wrapper" style="width: 400px;">
+      <%= simple_form_for [@project, @collaboration] do |f| %>
+        <%= f.input   :title,
                       required: true,
                       :label => "Short description of the work process" %>
-          <%= f.input :total_price,
+        <%= f.input   :total_price,
                       required: true,
                       :label => "Quote Total Price (rounded price)" %>
-          <%= f.button :submit, "Send", class: "btn btn-primary" %>
-        <% end %>
-      </div>
-        <div class="text-center mt-5">
-        <%= link_to "Home page", root_path %>
-        </div>
-    </div>
+        <%= f.button  :submit, "Send",
+                      class: "bouton-moyen" %>
+      <% end %>
 
-    
-
+</div>
+  <%= link_to "Home page", root_path %>
 </div>

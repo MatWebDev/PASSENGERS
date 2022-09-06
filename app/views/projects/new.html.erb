@@ -1,1 +1,45 @@
+<div class="banner-project-form">
+  <div class="container">
+    <h1>Tell us more about your project!</h1>
+  </div>
+</div>
+
+
+<div data-controller="display-second-question">
+  <%= simple_form_for @project do |f| %>
+      <div>
+        <h2>First of all, is your project an update of a current website or a creation of a new one?</h2>
+        <%= f.input :origin,
+                    as: :radio_buttons,
+                    collection: ['Creation'],
+                    input_html: { data: { action: "click->display-second-question#question"} }%>
+        <%= f.input :origin,
+                    as: :radio_buttons,
+                    collection: ['Update'],
+                    label: false, input_html: { data: { action: "click->display-second-question#notQuestion"} } %>
+      </div>
+
+      <div class="d-none" data-display-second-question-target= "display">
+        <h2><%= f.label(:website, "Ok you need a brand new website, but what type do you need?") %></h2>
+        <%= f.input :website,
+                    as: :radio_buttons,
+                    collection: ['One Page', 'Vitrine', 'E-shop under 10 items', 'E-shop over 10 items', 'WebApp'] %>
+
+        <h2>Describe your project and your needs in your own words:</h2>
+
+        <%= f.input :title,
+                    required: true %>
+        <%= f.input :description,
+                    as: :text,
+                    required: true %>
+
+        <%= f.button :submit,
+                      "Submit your project",
+                      class: "bouton-moyen" %>
+      </div>
+  <% end %>
+</div>
+
+
+
 <%= link_to "Accueil", root_path %>
