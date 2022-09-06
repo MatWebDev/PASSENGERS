@@ -1,4 +1,4 @@
-.banner{
+.banner {
   background-image: url(passengersgif);
   width: 100vw;
   height: 100vh;
@@ -6,19 +6,18 @@
   background-position: center;
   z-index: 0;
   position: relative;
-
 }
-.text-box{
+.text-box {
   padding-top: 100px;
   padding-left: 50px;
 
-  h1{
+  h1 {
     color: white;
     font-size: 96px;
     text-shadow: #474747 3px 5px 2px;
     font-weight: bold;
-    }
-  h2{
+  }
+  h2 {
     color: white;
     font-size: 96px;
     text-shadow: #474747 3px 5px 2px;
@@ -26,30 +25,28 @@
     font-weight: bold;
     padding-top: 350px;
   }
-  h2:nth-child(3){
+  h2:nth-child(3) {
     padding-top: 0;
-    padding-left: 600px
+    padding-left: 800px;
   }
 
-  span .changecolor{
+  span .changecolor {
     color: white;
     background-color: black;
     padding: 5px;
     border-radius: 5px;
-
   }
 }
 
-
 // ----------------------------------------------------------------FLECHE________________________________________________________________
-.arrow{
+.arrow {
   padding-top: 70px;
   position: absolute;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   cursor: pointer;
 }
-.arrow .fleche{
+.arrow .fleche {
   display: block;
   width: 30px;
   height: 30px;
@@ -59,22 +56,22 @@
   margin: -10px;
   animation: animate 2s infinite;
 }
-.arrow .fleche:nth-child(2){
+.arrow .fleche:nth-child(2) {
   animation-delay: -0.2s;
 }
-.arrow .fleche:nth-child(3){
+.arrow .fleche:nth-child(3) {
   animation-delay: -0.4s;
 }
 @keyframes animate {
-  0%{
-      opacity: 0;
-      transform: rotate(45deg) translate(-20px,-20px);
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
   }
-  50%{
-      opacity: 1;
+  50% {
+    opacity: 1;
   }
-  100%{
-      opacity: 0;
-      transform: rotate(45deg) translate(20px,20px);
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
   }
 }
