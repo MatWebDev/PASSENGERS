@@ -43,7 +43,7 @@ class ProjectsController < ApplicationController
     @project.user_id = current_user.id
 
     case @project.website
-    when 'One Page' || 'Vitrine'
+    when 'One Page', 'Vitrine'
       @project.score_difficulty = 1
     when 'E-shop under 10 items'
       @project.score_difficulty = 2
@@ -53,7 +53,7 @@ class ProjectsController < ApplicationController
       @project.score_difficulty = 4
     end
 
-    if @project.save!
+    if @project.save
       redirect_to project_path(@project)
     else
       render :new, status: :unprocessable_entity
