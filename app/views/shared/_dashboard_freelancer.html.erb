@@ -1,23 +1,39 @@
-<%= link_to "show the project", projects_path %>
-<div class="d-flex">
-  <h1>Welcome
-    <%= current_user.first_name %>
-    <%= current_user.last_name %>
-  </h1>
+<div class="content">
+  <div class="freelancer-card">
+    <div class="firstinfo">
+      <div class="firstinfo-image">
+        <%= cl_image_tag current_user.photo.key %>
+      </div>
+      <div class="profileinfo">
+        <h1>Welcome
+          <%= current_user.first_name %>
+          <%= current_user.last_name %>
+        </h1>
+         <p class="bio"><%= current_user.description %></p>
+      </div>
+    </div>
   </div>
-<p class="mt-3"><%= current_user.description %></p>
+</div>
+  <div class="badgescard">  
+    <% current_user.skills.each do |skill|%>
+      <% if skill == 'react' %>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40"/>
+      <% else %>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/<%= skill %>/<%= skill %>-plain.svg" width="40" />
+      <% end %>
+    <% end %>
+  </div>
+<br>
 
+<div class="free-projects">
+  <h3>If you were honest you will find suitables projects for you following this link</h3>
+  <%= link_to "Find new projects", projects_path, class:"bouton-large" %>
+</div>
+  
 
-<% current_user.skills.each do |skill|%>
-  <% if skill == 'react' %>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="50"/>
-  <% else %>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/<%= skill %>/<%= skill %>-plain.svg" width="50" />
-  <% end %>
-<% end %>
 
 <hr>
-<h2>My Collaborate</h2>
+<h2>My Collaborations</h2>
 <% @collaborations.each do |collaboration| %>
 <div class="collab">
 <div class="collab-img"></div>
@@ -26,3 +42,4 @@
 <div class="price"><%= collaboration.total_price %>€</div>
 </div>
 <% end %>
+
