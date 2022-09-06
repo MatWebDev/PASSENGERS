@@ -14,10 +14,10 @@ user = User.new(
   siret: '123 456 789 00018',
   number_of_projects: 25,
   year_exp: 5,
-  description: "I'm used to working with Ruby on Rails for the back, and ReactJs or HTML/CSS/Javascript for the front depending on the needs. I also like to discover new technologies or libraries when the project allows it!
+  description: "I'm used to working with Ruby on Rails for the back, and ReactJs or html5/css3/Javascript for the front depending on the needs. I also like to discover new technologies or libraries when the project allows it!
   I can work on a site from A to Z as well as adapt to an ongoing project, web or mobile.
   Do not hesitate to look at my various professional experiences to know all the technologies on which I have been able to work and to contact me for further information.",
-  skills: ['ruby', 'python', 'js', 'java', 'html', 'css', 'react', 'rails', 'wordpress', 'bootstrap'],
+  skills: ['ruby', 'python', 'javascript', 'java', 'html5', 'css3', 'react', 'rails', 'wordpress', 'bootstrap'],
   # score_exp: 85
 )
 user.photo.attached(io: file, filename: 'marilou.jpg', content_type: 'image/jpeg')
@@ -38,7 +38,7 @@ user = User.new(
   description: "Having already realized many applications for start-ups, I am specialized in the realization of MVP (Minimum Viable Product).
   I develop the entire application, front-end and back-end, and deliver the turnkey application.
   I also accompany for the publication on the blinds.",
-  skills: ['ruby', 'python', 'js', 'java', 'html'],
+  skills: ['ruby', 'python', 'javascript', 'java', 'html5'],
   # score_exp: 35
 )
 user.photo.attached(io: file, filename: 'guillaume.jpg', content_type: 'image/jpeg')
@@ -58,9 +58,9 @@ user = User.new(
   year_exp: 1,
   description: "Freshly graduated from Epitech, I'm a bit of a jack-of-all-trades.
   I have a strong appetite for functional projects even if I have a lot of experience in technical projects.
-  I can work on web development projects (fullstack: Backend in Python and Frontend in js) as well as on IS architecture in AGILE method. I like working independently and I adapt very easily to a new work group.
+  I can work on web development projects (fullstack: Backend in Python and Frontend in javascript) as well as on IS architecture in AGILE method. I like working independently and I adapt very easily to a new work group.
   I'm more successful on python in back-end web development.",
-  skills: ['ruby', 'python', 'wordpress', 'html'],
+  skills: ['ruby', 'python', 'wordpress', 'html5'],
   # score_exp: 19
 )
 user.photo.attached(io: file, filename: 'jerome.jpg', content_type: 'image/jpeg')
@@ -81,7 +81,7 @@ user = User.new(
   description: "Engineer for 6 years, I specialize in Java/JEE fullstack web development.
   During these five years, I had the opportunity to provide solutions to complex problems all at high availability and high performance.
   Data and exchange security has always been one of my top priorities (PCI-DSS standard).",
-  skills: ['ruby', 'python', 'js', 'java', 'html', 'css', 'react', 'rails', 'wordpress', 'bootstrap', 'divi', 'woocommerce', 'php', 'shopify', 'c#'],
+  skills: ['ruby', 'python', 'javascript', 'java', 'html5', 'css3', 'react', 'rails', 'wordpress', 'bootstrap', 'photoshop', 'illustrator', 'woocommerce', 'php', 'csharp'],
   # score_exp: 245
 )
 user.photo.attached(io: file, filename: 'mathieu.jpg', content_type: 'image/jpeg')
@@ -99,10 +99,10 @@ user = User.new(
   siret: '123 456 789 00018',
   number_of_projects: 25,
   year_exp: 5,
-  description: "I'm used to working with Ruby on Rails for the back, and ReactJs or HTML/CSS/Javascript for the front depending on the needs. I also like to discover new technologies or libraries when the project allows it!
+  description: "I'm used to working with Ruby on Rails for the back, and ReactJs or html5/css3/Javascript for the front depending on the needs. I also like to discover new technologies or libraries when the project allows it!
   I can work on a site from A to Z as well as adapt to an ongoing project, web or mobile.
   Do not hesitate to look at my various professional experiences to know all the technologies on which I have been able to work and to contact me for further information.",
-  skills: ['ruby', 'python', 'js', 'java', 'html', 'css', 'react', 'rails', 'wordpress', 'bootstrap'],
+  skills: ['ruby', 'python', 'javascript', 'java', 'html5', 'css3', 'react', 'rails', 'wordpress', 'bootstrap'],
   # score_exp: 85
 )
 user.photo.attached(io: file, filename: 'marilou.jpg', content_type: 'image/jpeg')
@@ -123,7 +123,7 @@ user = User.new(
   description: "Having already realized many applications for start-ups, I am specialized in the realization of MVP (Minimum Viable Product).
   I develop the entire application, front-end and back-end, and deliver the turnkey application.
   I also accompany for the publication on the blinds.",
-  skills: ['ruby', 'python', 'js', 'java', 'html'],
+  skills: ['ruby', 'python', 'javascript', 'java', 'html5'],
   # score_exp: 35
 )
 user.photo.attached(io: file, filename: 'guillaume.jpg', content_type: 'image/jpeg')
@@ -143,9 +143,9 @@ user = User.new(
   year_exp: 1,
   description: "Freshly graduated from Epitech, I'm a bit of a jack-of-all-trades.
   I have a strong appetite for functional projects even if I have a lot of experience in technical projects.
-  I can work on web development projects (fullstack: Backend in Python and Frontend in js) as well as on IS architecture in AGILE method. I like working independently and I adapt very easily to a new work group.
+  I can work on web development projects (fullstack: Backend in Python and Frontend in javascript) as well as on IS architecture in AGILE method. I like working independently and I adapt very easily to a new work group.
   I'm more successful on python in back-end web development.",
-  skills: ['ruby', 'python', 'wordpress', 'html'],
+  skills: ['ruby', 'python', 'wordpress', 'html5'],
   # score_exp: 19
 )
 user.photo.attached(io: file, filename: 'jerome.jpg', content_type: 'image/jpeg')
@@ -166,7 +166,7 @@ user = User.new(
   description: "Engineer for 6 years, I specialize in Java/JEE fullstack web development.
   During these five years, I had the opportunity to provide solutions to complex problems all at high availability and high performance.
   Data and exchange security has always been one of my top priorities (PCI-DSS standard).",
-  skills: ['ruby', 'python', 'js', 'java', 'html', 'css', 'react', 'rails', 'wordpress', 'bootstrap', 'divi', 'woocommerce', 'php', 'shopify', 'c#'],
+  skills: ['ruby', 'python', 'javascript', 'java', 'html5', 'css3', 'react', 'rails', 'wordpress', 'bootstrap', 'photoshop', 'illustrator', 'woocommerce', 'php', 'csharp'],
   # score_exp: 245
 )
 user.photo.attached(io: file, filename: 'mathieu.jpg', content_type: 'image/jpeg')
@@ -184,10 +184,10 @@ user = User.new(
   siret: '123 456 789 00018',
   number_of_projects: 25,
   year_exp: 5,
-  description: "I'm used to working with Ruby on Rails for the back, and ReactJs or HTML/CSS/Javascript for the front depending on the needs. I also like to discover new technologies or libraries when the project allows it!
+  description: "I'm used to working with Ruby on Rails for the back, and ReactJs or html5/css3/Javascript for the front depending on the needs. I also like to discover new technologies or libraries when the project allows it!
   I can work on a site from A to Z as well as adapt to an ongoing project, web or mobile.
   Do not hesitate to look at my various professional experiences to know all the technologies on which I have been able to work and to contact me for further information.",
-  skills: ['ruby', 'python', 'js', 'java', 'html', 'css', 'react', 'rails', 'wordpress', 'bootstrap'],
+  skills: ['ruby', 'python', 'javascript', 'java', 'html5', 'css3', 'react', 'rails', 'wordpress', 'bootstrap'],
   # score_exp: 85
 )
 user.photo.attached(io: file, filename: 'marilou.jpg', content_type: 'image/jpeg')
@@ -208,7 +208,7 @@ user = User.new(
   description: "Having already realized many applications for start-ups, I am specialized in the realization of MVP (Minimum Viable Product).
   I develop the entire application, front-end and back-end, and deliver the turnkey application.
   I also accompany for the publication on the blinds.",
-  skills: ['ruby', 'python', 'js', 'java', 'html'],
+  skills: ['ruby', 'python', 'javascript', 'java', 'html5'],
   # score_exp: 35
 )
 user.photo.attached(io: file, filename: 'guillaume.jpg', content_type: 'image/jpeg')
@@ -228,9 +228,9 @@ user = User.new(
   year_exp: 1,
   description: "Freshly graduated from Epitech, I'm a bit of a jack-of-all-trades.
   I have a strong appetite for functional projects even if I have a lot of experience in technical projects.
-  I can work on web development projects (fullstack: Backend in Python and Frontend in js) as well as on IS architecture in AGILE method. I like working independently and I adapt very easily to a new work group.
+  I can work on web development projects (fullstack: Backend in Python and Frontend in javascript) as well as on IS architecture in AGILE method. I like working independently and I adapt very easily to a new work group.
   I'm more successful on python in back-end web development.",
-  skills: ['ruby', 'python', 'wordpress', 'html'],
+  skills: ['ruby', 'python', 'wordpress', 'html5'],
   # score_exp: 19
 )
 user.photo.attached(io: file, filename: 'jerome.jpg', content_type: 'image/jpeg')
@@ -251,7 +251,7 @@ user = User.new(
   description: "Engineer for 6 years, I specialize in Java/JEE fullstack web development.
   During these five years, I had the opportunity to provide solutions to complex problems all at high availability and high performance.
   Data and exchange security has always been one of my top priorities (PCI-DSS standard).",
-  skills: ['ruby', 'python', 'js', 'java', 'html', 'css', 'react', 'rails', 'wordpress', 'bootstrap', 'divi', 'woocommerce', 'php', 'shopify', 'c#'],
+  skills: ['ruby', 'python', 'javascript', 'java', 'html5', 'css3', 'react', 'rails', 'wordpress', 'bootstrap', 'photoshop', 'illustrator', 'woocommerce', 'php', 'csharp'],
   # score_exp: 245
 )
 user.photo.attached(io: file, filename: 'mathieu.jpg', content_type: 'image/jpeg')
@@ -269,10 +269,10 @@ user = User.new(
   siret: '123 456 789 00018',
   number_of_projects: 25,
   year_exp: 5,
-  description: "I'm used to working with Ruby on Rails for the back, and ReactJs or HTML/CSS/Javascript for the front depending on the needs. I also like to discover new technologies or libraries when the project allows it!
+  description: "I'm used to working with Ruby on Rails for the back, and ReactJs or html5/css3/Javascript for the front depending on the needs. I also like to discover new technologies or libraries when the project allows it!
   I can work on a site from A to Z as well as adapt to an ongoing project, web or mobile.
   Do not hesitate to look at my various professional experiences to know all the technologies on which I have been able to work and to contact me for further information.",
-  skills: ['ruby', 'python', 'js', 'java', 'html', 'css', 'react', 'rails', 'wordpress', 'bootstrap'],
+  skills: ['ruby', 'python', 'javascript', 'java', 'html5', 'css3', 'react', 'rails', 'wordpress', 'bootstrap'],
   # score_exp: 85
 )
 user.photo.attached(io: file, filename: 'marilou.jpg', content_type: 'image/jpeg')
@@ -293,7 +293,7 @@ user = User.new(
   description: "Having already realized many applications for start-ups, I am specialized in the realization of MVP (Minimum Viable Product).
   I develop the entire application, front-end and back-end, and deliver the turnkey application.
   I also accompany for the publication on the blinds.",
-  skills: ['ruby', 'python', 'js', 'java', 'html'],
+  skills: ['ruby', 'python', 'javascript', 'java', 'html5'],
   # score_exp: 35
 )
 user.photo.attached(io: file, filename: 'guillaume.jpg', content_type: 'image/jpeg')
@@ -313,9 +313,9 @@ user = User.new(
   year_exp: 1,
   description: "Freshly graduated from Epitech, I'm a bit of a jack-of-all-trades.
   I have a strong appetite for functional projects even if I have a lot of experience in technical projects.
-  I can work on web development projects (fullstack: Backend in Python and Frontend in js) as well as on IS architecture in AGILE method. I like working independently and I adapt very easily to a new work group.
+  I can work on web development projects (fullstack: Backend in Python and Frontend in javascript) as well as on IS architecture in AGILE method. I like working independently and I adapt very easily to a new work group.
   I'm more successful on python in back-end web development.",
-  skills: ['ruby', 'python', 'wordpress', 'html'],
+  skills: ['ruby', 'python', 'wordpress', 'html5'],
   # score_exp: 19
 )
 user.photo.attached(io: file, filename: 'jerome.jpg', content_type: 'image/jpeg')
@@ -336,7 +336,7 @@ user = User.new(
   description: "Engineer for 6 years, I specialize in Java/JEE fullstack web development.
   During these five years, I had the opportunity to provide solutions to complex problems all at high availability and high performance.
   Data and exchange security has always been one of my top priorities (PCI-DSS standard).",
-  skills: ['ruby', 'python', 'js', 'java', 'html', 'css', 'react', 'rails', 'wordpress', 'bootstrap', 'divi', 'woocommerce', 'php', 'shopify', 'c#'],
+  skills: ['ruby', 'python', 'javascript', 'java', 'html5', 'css3', 'react', 'rails', 'wordpress', 'bootstrap', 'photoshop', 'illustrator', 'woocommerce', 'php', 'csharp'],
   # score_exp: 245
 )
 user.photo.attached(io: file, filename: 'mathieu.jpg', content_type: 'image/jpeg')
@@ -356,9 +356,9 @@ user = User.new(
   year_exp: 1,
   description: "Freshly graduated from Epitech, I'm a bit of a jack-of-all-trades.
   I have a strong appetite for functional projects even if I have a lot of experience in technical projects.
-  I can work on web development projects (fullstack: Backend in Python and Frontend in js) as well as on IS architecture in AGILE method. I like working independently and I adapt very easily to a new work group.
+  I can work on web development projects (fullstack: Backend in Python and Frontend in javascript) as well as on IS architecture in AGILE method. I like working independently and I adapt very easily to a new work group.
   I'm more successful on python in back-end web development.",
-  skills: ['ruby', 'python', 'wordpress', 'html'],
+  skills: ['ruby', 'python', 'wordpress', 'html5'],
   # score_exp: 19
 )
 user.photo.attached(io: file, filename: 'mathieu.jpg', content_type: 'image/jpeg')
