@@ -380,7 +380,8 @@ puts 'Users created successfully man!'
 Project.create!(
   title: "e-shop creation for JM company",
   description: "I need an e-shop for my company, I don't know anything about web development, please help me!",
-  answers: ['creation', 'eshop under 10 items'],
+  origin: "Creation",
+  website: "E-shop under 10 items",
   user_id: User.find_by(first_name: 'Jean-Michel').id,
   score_difficulty: 2
 )
@@ -388,7 +389,8 @@ Project.create!(
 Project.create!(
   title: "One Page website",
   description: "I need a one page website for my company, I don't know anything about web development, please help me!",
-  answers: ['creation', 'one page'],
+  origin: "Creation",
+  website: "One Page",
   user_id: User.find_by(first_name: 'Jean-Michel').id,
   score_difficulty: 1
 )
@@ -396,7 +398,8 @@ Project.create!(
 Project.create!(
   title: "Big eshop",
   description: "We need a big eshop to sale different products in several categories. We don't have development department so we need a freelancer!",
-  answers: ['creation', 'eshop over 10 items'],
+  origin: "Creation",
+  website: "E-shop over 10 items",
   user_id: User.find_by(first_name: 'Jean-Michel').id,
   score_difficulty: 3
 )
@@ -404,7 +407,8 @@ Project.create!(
 Project.create!(
   title: "Webapp JM&Beer",
   description: "We need a web app to serve automatically a beer to our customer.",
-  answers: ['creation', 'webapp'],
+  origin: "Creation",
+  website: "WebApp",
   user_id: User.find_by(first_name: 'Jean-Michel').id,
   score_difficulty: 4
 )
@@ -412,7 +416,8 @@ Project.create!(
 Project.create!(
   title: "Webapp JM&Fils",
   description: "We need a web app but we don't know why.",
-  answers: ['creation', 'webapp'],
+  origin: "Creation",
+  website: "WebApp",
   user_id: User.find_by(first_name: 'Jean-Michel').id,
   score_difficulty: 4
 )
