@@ -31,9 +31,50 @@
     padding-left: 600px
   }
 
-  span{
-    color: black;
-    text-shadow: #d8d7d7 3px 5px 2px;
+  span .changecolor{
+    color: white;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
 
+  }
+}
+
+
+// ----------------------------------------------------------------FLECHE________________________________________________________________
+.arrow{
+  padding-top: 70px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+}
+.arrow .fleche{
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid #e9eced;
+  border-right: 5px solid #eceff1;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+.arrow .fleche:nth-child(2){
+  animation-delay: -0.2s;
+}
+.arrow .fleche:nth-child(3){
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0%{
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px,-20px);
+  }
+  50%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+      transform: rotate(45deg) translate(20px,20px);
   }
 }
