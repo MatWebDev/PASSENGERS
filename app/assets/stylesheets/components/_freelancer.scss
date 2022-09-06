@@ -46,7 +46,7 @@
     animation-name: drop;
     animation-duration: 3s;
     img { 
-      filter: saturate(0);
+      filter: saturate(0.7);
     }
   }   
 
@@ -71,6 +71,14 @@
   }
 }
 
+.free-projects {
+  display: block;
+  text-align: center;
+  margin: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
 @keyframes drop{
   0%{ 
     opacity: 0;
@@ -89,12 +97,6 @@
   bottom: 0px;}
 }
  
-// @keyframes animainfos{
-//   0%{
-//     bottom:  10px;}
-//   100%{
-//   bottom: -42px;}
-// }
 
 @keyframes rotatemagic{
   0%{
@@ -109,4 +111,46 @@
     top: -24px;
     left: -78px;
   }
+}
+
+.arrow-projects{
+  padding-top: 70px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+}
+.arrow-projects .projects-fleche{
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid #0cff03;
+  border-right: 5px solid #0099ff;
+  transform: rotate(15deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+.arrow-projects .projects-fleche:nth-child(2){
+  animation-delay: -0.2s;
+}
+.arrow-projects .projects-fleche:nth-child(3){
+  animation-delay: -0.4s;
+}
+
+@keyframes animate {
+  0%{
+      opacity: 0;
+      transform: rotate(15deg) translate(-20px,-20px);
+  }
+  50%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+      transform: rotate(15deg) translate(20px,20px);
+  }
+}
+
+a {
+  text-decoration: none;
 }

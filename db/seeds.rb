@@ -1,3 +1,5 @@
+require "open-uri"
+
 User.destroy_all
 Project.destroy_all
 Chatroom.destroy_all
