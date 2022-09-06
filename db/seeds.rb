@@ -22,7 +22,7 @@ user = User.new(
   skills: ['ruby', 'python', 'javascript', 'java', 'html5', 'css3', 'react', 'rails', 'wordpress', 'bootstrap'],
   # score_exp: 85
 )
-user.photo.attached(io: file, filename: 'marilou.jpg', content_type: 'image/jpeg')
+user.photo.attach(io: file, filename: 'marilou.jpeg', content_type: 'image/jpeg')
 user.save!
 
 file = URI.open('https://avatars.githubusercontent.com/u/103571112?v=4')
@@ -43,7 +43,7 @@ user = User.new(
   skills: ['ruby', 'python', 'javascript', 'java', 'html5'],
   # score_exp: 35
 )
-user.photo.attached(io: file, filename: 'guillaume.jpg', content_type: 'image/jpeg')
+user.photo.attach(io: file, filename: 'guillaume.jpg', content_type: 'image/jpeg')
 user.save!
 
 file = URI.open('https://avatars.githubusercontent.com/u/102875112?v=4')
@@ -65,7 +65,7 @@ user = User.new(
   skills: ['ruby', 'python', 'wordpress', 'html5'],
   # score_exp: 19
 )
-user.photo.attached(io: file, filename: 'jerome.jpg', content_type: 'image/jpeg')
+user.photo.attach(io: file, filename: 'jerome.jpg', content_type: 'image/jpeg')
 user.save!
 
 file = URI.open('https://avatars.githubusercontent.com/u/105813372?v=4')
@@ -86,7 +86,7 @@ user = User.new(
   skills: ['ruby', 'python', 'javascript', 'java', 'html5', 'css3', 'react', 'rails', 'wordpress', 'bootstrap', 'photoshop', 'illustrator', 'woocommerce', 'php', 'csharp'],
   # score_exp: 245
 )
-user.photo.attached(io: file, filename: 'mathieu.jpg', content_type: 'image/jpeg')
+user.photo.attach(io: file, filename: 'mathieu.jpg', content_type: 'image/jpeg')
 user.save!
 
 file = URI.open('https://avatars.githubusercontent.com/u/105067544?v=4')
@@ -107,7 +107,7 @@ user = User.new(
   skills: ['ruby', 'python', 'javascript', 'java', 'html5', 'css3', 'react', 'rails', 'wordpress', 'bootstrap'],
   # score_exp: 85
 )
-user.photo.attached(io: file, filename: 'marilou.jpg', content_type: 'image/jpeg')
+user.photo.attach(io: file, filename: 'marilou.jpg', content_type: 'image/jpeg')
 user.save!
 
 file = URI.open('https://avatars.githubusercontent.com/u/103571112?v=4')
@@ -128,7 +128,7 @@ user = User.new(
   skills: ['ruby', 'python', 'javascript', 'java', 'html5'],
   # score_exp: 35
 )
-user.photo.attached(io: file, filename: 'guillaume.jpg', content_type: 'image/jpeg')
+user.photo.attach(io: file, filename: 'guillaume.jpg', content_type: 'image/jpeg')
 user.save!
 
 file = URI.open('https://avatars.githubusercontent.com/u/102875112?v=4')
@@ -150,7 +150,7 @@ user = User.new(
   skills: ['ruby', 'python', 'wordpress', 'html5'],
   # score_exp: 19
 )
-user.photo.attached(io: file, filename: 'jerome.jpg', content_type: 'image/jpeg')
+user.photo.attach(io: file, filename: 'jerome.jpg', content_type: 'image/jpeg')
 user.save!
 
 file = URI.open('https://avatars.githubusercontent.com/u/105813372?v=4')
@@ -171,7 +171,7 @@ user = User.new(
   skills: ['ruby', 'python', 'javascript', 'java', 'html5', 'css3', 'react', 'rails', 'wordpress', 'bootstrap', 'photoshop', 'illustrator', 'woocommerce', 'php', 'csharp'],
   # score_exp: 245
 )
-user.photo.attached(io: file, filename: 'mathieu.jpg', content_type: 'image/jpeg')
+user.photo.attach(io: file, filename: 'mathieu.jpg', content_type: 'image/jpeg')
 user.save!
 
 file = URI.open('https://avatars.githubusercontent.com/u/105067544?v=4')
@@ -192,7 +192,7 @@ user = User.new(
   skills: ['ruby', 'python', 'javascript', 'java', 'html5', 'css3', 'react', 'rails', 'wordpress', 'bootstrap'],
   # score_exp: 85
 )
-user.photo.attached(io: file, filename: 'marilou.jpg', content_type: 'image/jpeg')
+user.photo.attach(io: file, filename: 'marilou.jpg', content_type: 'image/jpeg')
 user.save!
 
 file = URI.open('https://avatars.githubusercontent.com/u/103571112?v=4')
@@ -213,7 +213,7 @@ user = User.new(
   skills: ['ruby', 'python', 'javascript', 'java', 'html5'],
   # score_exp: 35
 )
-user.photo.attached(io: file, filename: 'guillaume.jpg', content_type: 'image/jpeg')
+user.photo.attach(io: file, filename: 'guillaume.jpg', content_type: 'image/jpeg')
 user.save!
 
 file = URI.open('https://avatars.githubusercontent.com/u/102875112?v=4')
@@ -235,7 +235,7 @@ user = User.new(
   skills: ['ruby', 'python', 'wordpress', 'html5'],
   # score_exp: 19
 )
-user.photo.attached(io: file, filename: 'jerome.jpg', content_type: 'image/jpeg')
+user.photo.attach(io: file, filename: 'jerome.jpg', content_type: 'image/jpeg')
 user.save!
 
 file = URI.open('https://avatars.githubusercontent.com/u/105813372?v=4')
@@ -256,7 +256,7 @@ user = User.new(
   skills: ['ruby', 'python', 'javascript', 'java', 'html5', 'css3', 'react', 'rails', 'wordpress', 'bootstrap', 'photoshop', 'illustrator', 'woocommerce', 'php', 'csharp'],
   # score_exp: 245
 )
-user.photo.attached(io: file, filename: 'mathieu.jpg', content_type: 'image/jpeg')
+user.photo.attach(io: file, filename: 'mathieu.jpg', content_type: 'image/jpeg')
 user.save!
 
 file = URI.open('https://avatars.githubusercontent.com/u/105067544?v=4')
@@ -277,7 +277,7 @@ user = User.new(
   skills: ['ruby', 'python', 'javascript', 'java', 'html5', 'css3', 'react', 'rails', 'wordpress', 'bootstrap'],
   # score_exp: 85
 )
-user.photo.attached(io: file, filename: 'marilou.jpg', content_type: 'image/jpeg')
+user.photo.attach(io: file, filename: 'marilou.jpg', content_type: 'image/jpeg')
 user.save!
 
 file = URI.open('https://avatars.githubusercontent.com/u/103571112?v=4')
@@ -298,7 +298,7 @@ user = User.new(
   skills: ['ruby', 'python', 'javascript', 'java', 'html5'],
   # score_exp: 35
 )
-user.photo.attached(io: file, filename: 'guillaume.jpg', content_type: 'image/jpeg')
+user.photo.attach(io: file, filename: 'guillaume.jpg', content_type: 'image/jpeg')
 user.save!
 
 file = URI.open('https://avatars.githubusercontent.com/u/102875112?v=4')
@@ -320,7 +320,7 @@ user = User.new(
   skills: ['ruby', 'python', 'wordpress', 'html5'],
   # score_exp: 19
 )
-user.photo.attached(io: file, filename: 'jerome.jpg', content_type: 'image/jpeg')
+user.photo.attach(io: file, filename: 'jerome.jpg', content_type: 'image/jpeg')
 user.save!
 
 file = URI.open('https://avatars.githubusercontent.com/u/105813372?v=4')
@@ -341,7 +341,7 @@ user = User.new(
   skills: ['ruby', 'python', 'javascript', 'java', 'html5', 'css3', 'react', 'rails', 'wordpress', 'bootstrap', 'photoshop', 'illustrator', 'woocommerce', 'php', 'csharp'],
   # score_exp: 245
 )
-user.photo.attached(io: file, filename: 'mathieu.jpg', content_type: 'image/jpeg')
+user.photo.attach(io: file, filename: 'mathieu.jpg', content_type: 'image/jpeg')
 user.save!
 
 file = URI.open('https://avatars.githubusercontent.com/u/102875112?v=4')
@@ -363,7 +363,7 @@ user = User.new(
   skills: ['ruby', 'python', 'wordpress', 'html5'],
   # score_exp: 19
 )
-user.photo.attached(io: file, filename: 'mathieu.jpg', content_type: 'image/jpeg')
+user.photo.attach(io: file, filename: 'mathieu.jpg', content_type: 'image/jpeg')
 user.save!
 
 User.create!(

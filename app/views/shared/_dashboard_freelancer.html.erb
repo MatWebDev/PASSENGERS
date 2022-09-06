@@ -1,9 +1,7 @@
 <div class="content">
   <div class="freelancer-card">
     <div class="firstinfo">
-      <div class="firstinfo-image">
-        <%= cl_image_tag current_user.photo.key %>
-      </div>
+      <%= cl_image_tag current_user.photo.key, height: 150, width: 150, crop: :fill %>
       <div class="profileinfo">
         <h1>Welcome
           <%= current_user.first_name %>
@@ -14,7 +12,7 @@
     </div>
   </div>
 </div>
-  <div class="badgescard">  
+  <div class="badgescard">
     <% current_user.skills.each do |skill|%>
       <% if skill == 'react' %>
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40"/>
@@ -25,12 +23,11 @@
   </div>
 <br>
 
+
 <div class="free-projects">
   <h3>If you were honest you will find suitables projects for you following this link</h3>
   <%= link_to "Find new projects", projects_path, class:"bouton-large" %>
 </div>
-  
-
 
 <hr>
 <h2>My Collaborations</h2>
@@ -42,4 +39,3 @@
 <div class="price"><%= collaboration.total_price %>€</div>
 </div>
 <% end %>
-
