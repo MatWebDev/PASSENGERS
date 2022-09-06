@@ -1,43 +1,9 @@
-// Bouton du formulaire pour déposer un devis
-// À voir si on garde le orange
-.bouton-moyen {
-  background: #FF7F3F;
-  border: 1px solid #FF7F3F;
-  border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
-  font-size: 16px;
-  font-weight: 800;
-  line-height: 16px;
-  min-height: 40px;
-  outline: 0;
-  padding: 12px 14px;
-  text-align: center;
-  text-rendering: geometricprecision;
-  text-transform: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-}
-
-.bouton-moyen:hover,
-.bouton-moyen:active {
-  background-color: initial;
-  background-position: 0 0;
-  color: #FF7F3F;
-}
-
-.bouton-moyen:active {
-  opacity: .5;
+.bg-dark {
+  margin-top: 90px;
+  height: 224px;
 }
 
 
-// BOUTONS GITHUB FOOTER
 // ---- bouton Jérome----
 .btn_jeje {
   border: solid 1px white;
