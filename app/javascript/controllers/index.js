@@ -10,5 +10,8 @@ application.register("chatroom-subscription", ChatroomSubscriptionController)
 import DisplayController from "./display_controller"
 application.register("display", DisplayController)
 
+import DisplaySecondQuestionController from "./display_second_question_controller"
+application.register("display-second-question", DisplaySecondQuestionController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)

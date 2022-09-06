@@ -1,0 +1,39 @@
+<%# <% freelancers = User.where(role: 'freelancer') %>
+<%# <% junior_freelancers = [] %>
+<%# <% intermediate_freelancers = [] %>
+<%# <% senior_freelancers = [] %>
+
+<%# <% freelancers.each do |freelancer| %>
+  <%# <% if freelancer.score_exp <=33 %>
+    <%# <% junior_freelancers << freelancer %>
+  <%# <% elsif freelancer.score_exp > 33 && freelancer.score_exp <= 66 %>
+    <%# <% intermediate_freelancers << freelancer %>
+  <%# <% elsif freelancer.score_exp > 66 %>
+    <%# <% senior_freelancers << freelancer %>
+  <%# <% end %>
+
+  <%# <% junior_freelancers %>
+  <%# <% intermediate_freelancers %>
+  <%# <% senior_freelancers %>
+<%# <% end %>
+
+
+<%# à adapter %>
+<% case @project.score_difficulty %>
+<% when 1 %>
+  <% @junior_freelancers.each do |freelancer| %>
+    <p><%= freelancer.first_name %></p>
+  <% end %>
+<% when 2 %>
+  <% @junior_intermediate_freelancers.each do |freelancer| %>
+    <p><%= freelancer.first_name %></p>
+  <% end %>
+<% when 3 %>
+  <% @intermediate_freelancers.each do |freelancer| %>
+    <p><%= freelancer.first_name %></p>
+  <% end %>
+<% when 4 %>
+  <% @senior_freelancers.each do |freelancer| %>
+    <p><%= freelancer.first_name %></p>
+  <% end %>
+<% end %>
