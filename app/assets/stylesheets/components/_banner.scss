@@ -1,0 +1,39 @@
+.banner{
+  background-image: url(passengersgif);
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  position: relative;
+
+}
+.text-box{
+  padding-top: 100px;
+  padding-left: 50px;
+
+  h1{
+    color: white;
+    font-size: 96px;
+    text-shadow: #474747 3px 5px 2px;
+    font-weight: bold;
+    }
+  h2{
+    color: white;
+    font-size: 96px;
+    text-shadow: #474747 3px 5px 2px;
+    font-size: 48px;
+    font-weight: bold;
+    padding-top: 350px;
+  }
+  h2:nth-child(3){
+    padding-top: 0;
+    padding-left: 600px
+  }
+
+  span{
+    color: black;
+    text-shadow: #d8d7d7 3px 5px 2px;
+
+  }
+}
