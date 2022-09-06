@@ -1,7 +1,7 @@
 <div class="content">
   <div class="freelancer-card">
     <div class="firstinfo">
-      <%= cl_image_path current_user.photo.key, height: 150, width: 150, crop: :fill %>
+      <%= cl_image_tag current_user.photo.key, height: 150, width: 150, crop: :fill %>
       <div class="profileinfo">
         <h1>Welcome
           <%= current_user.first_name %>
@@ -12,7 +12,7 @@
     </div>
   </div>
 </div>
-  <div class="badgescard">  
+  <div class="badgescard">
     <% current_user.skills.each do |skill|%>
       <% if skill == 'react' %>
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40"/>
@@ -24,8 +24,6 @@
 <br>
 
 <%= link_to "show the project", projects_path %>
-  
-<%= cl_image_tag current_user.photo.key, height: 150, width: 150, crop: :fill %>
 
 <hr>
 <h2>My Collaborate</h2>
@@ -37,4 +35,3 @@
 <div class="price"><%= collaboration.total_price %>€</div>
 </div>
 <% end %>
-
