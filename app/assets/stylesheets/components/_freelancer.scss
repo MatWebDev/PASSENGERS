@@ -8,9 +8,6 @@
 
 @mixin dimensions($width: null, $height: null) { width: $width; min-height: $height; }
 
-.content{
-  // animation: animatop 0.9s  cubic-bezier(0.425, 1.140, 0.470, 1.125) forwards ;
-}
 
 .freelancer-card{  
  @include dimensions( 100%, 150px);
@@ -75,8 +72,8 @@
   display: block;
   text-align: center;
   margin: 20px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 75px;
+  margin-bottom: 75px;
 }
 
 @keyframes drop{
@@ -111,30 +108,6 @@
     top: -24px;
     left: -78px;
   }
-}
-
-.arrow-projects{
-  padding-top: 70px;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  cursor: pointer;
-}
-.arrow-projects .projects-fleche{
-  display: block;
-  width: 30px;
-  height: 30px;
-  border-bottom: 5px solid #0cff03;
-  border-right: 5px solid #0099ff;
-  transform: rotate(15deg);
-  margin: -10px;
-  animation: animate 2s infinite;
-}
-.arrow-projects .projects-fleche:nth-child(2){
-  animation-delay: -0.2s;
-}
-.arrow-projects .projects-fleche:nth-child(3){
-  animation-delay: -0.4s;
 }
 
 @keyframes animate {
