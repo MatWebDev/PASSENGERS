@@ -1,0 +1,7 @@
+# config/meta.yml
+
+meta_product_name: "Passengers"
+meta_title: "Passengers - Get the best developper"
+meta_description: "Passengers finds the best developper for your project"
+meta_image: "passengers_logo.png" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards
