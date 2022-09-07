@@ -8,6 +8,16 @@
 
 @mixin dimensions($width: null, $height: null) { width: $width; min-height: $height; }
 
+.freelancers {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  h2 {
+    margin-bottom: 35px;
+  }
+}
+
 
 .freelancer-card{  
  @include dimensions( 100%, 150px);
@@ -30,6 +40,7 @@
 
   .badgescard{
     margin: 0 auto;
+    margin-bottom: 75px;
     display: flex;
     padding: 10px 20px;
     border-radius: 3px;
