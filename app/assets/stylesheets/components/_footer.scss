@@ -1,145 +1,78 @@
-.bg-dark {
-  margin-top: 90px;
-  height: 224px;
+.footer-clean {
+  color:#4b4c4d;
+  margin-top: 100px;
+  width: 100%;
+  background-color: black;
+  padding-top: 10px;
 }
 
-
-// ---- bouton Jérome----
-.btn_jeje {
-  border: solid 1px white;
-  border-radius: 3px;
-  padding: 6px 12px;
-  margin-right: 20px;
-  color: white;
+.footer-clean h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
 }
 
-.btn_jeje:hover {
-  background-color: white;
-  color: black;
+.footer-clean ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
 }
 
-.btn_jeje:after {
-  content: "";
-  opacity: 0%;
-  display: inline-block;
-  position: relative;
-  right: -10px;
-  transition: all 0.4s ease;
-  background-color: white;
+.footer-clean ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
 }
 
-.btn_jeje:hover:after {
-  content: "Jérome";
-  display: inline-block;
-  position: relative;
-  opacity: 100%;
-  margin: -5px 15px;
-  right: 0px;
-  transition: all 0.4s ease;
-  background-color: white;
+.footer-clean ul a:hover {
+  opacity:1;
 }
 
-// ---- bouton Mathieu ----
-.btn_mat {
-  border: solid 1px white;
-  border-radius: 3px;
-  padding: 6px 12px;
-  margin-right: 20px;
-  color: white;
+.footer-clean .item.social {
+  text-align:right;
 }
 
-.btn_mat:hover {
-  background-color: white;
-  color: black;
+.footer-clean .item.social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin-left:10px;
+  color:inherit;
+  opacity:0.75;
 }
 
-.btn_mat:after {
-  content: "";
-  opacity: 0%;
-  display: inline-block;
-  position: relative;
-  right: -10px;
-  transition: all 0.4s ease;
-  background-color: white;
+.footer-clean .item.social > a:hover {
+  opacity:0.9;
 }
 
-.btn_mat:hover:after {
-  content: "Mathieu";
-  display: inline-block;
-  position: relative;
-  opacity: 100%;
-  margin: -5px 15px;
-  right: 0px;
-  transition: all 0.4s ease;
-  background-color: white;
+.footer-clean .copyright {
+  margin-bottom:0;
+  font-size:13px;
+  background-color: black;
+  position: absolute;
 }
 
-// ---- bouton Marilou ----
-.btn_lou {
-  border: solid 1px white;
-  border-radius: 3px;
-  padding: 6px 12px;
-  margin-right: 20px;
-  color: white;
+.mb-4 {
+  margin-top: 30px;
 }
 
-.btn_lou:hover {
-  background-color: white;
-  color: black;
+.copyright {
+  width: 100%;
+  text-align: center;
 }
 
-.btn_lou:after {
-  content: "";
-  opacity: 0%;
-  display: inline-block;
-  position: relative;
-  right: -10px;
-  transition: all 0.4s ease;
-  background-color: white;
+.text {
+  text-align: center;
 }
 
-.btn_lou:hover:after {
-  content: "Marilou";
-  display: inline-block;
-  position: relative;
-  opacity: 100%;
-  margin: -5px 15px;
-  right: 0px;
-  transition: all 0.4s ease;
-  background-color: white;
-}
-
-// ---- bouton Guillaume ----
-.btn_gui {
-  border: solid 1px white;
-  border-radius: 3px;
-  padding: 6px 12px;
-  margin-right: 20px;
-  color: white;
-}
-
-.btn_gui:hover {
-  background-color: white;
-  color: black;
-}
-
-.btn_gui:after {
-  content: "";
-  opacity: 0%;
-  display: inline-block;
-  position: relative;
-  right: -10px;
-  transition: all 0.4s ease;
-  background-color: white;
-}
-
-.btn_gui:hover:after {
-  content: "Guillaume";
-  display: inline-block;
-  position: relative;
-  opacity: 100%;
-  margin: -5px 15px;
-  right: 0px;
-  transition: all 0.4s ease;
-  background-color: white;
+.text-center {
+  margin-top: 10px!important;
 }
