@@ -6,50 +6,52 @@
 
 
 <div data-controller="display-second-question">
-<div class="projectchoicebox">
-<div class="imgprojectnew"></div>
-  <%= simple_form_for @project do |f| %>
-<h2>First of all is your project an update</h2> <h2>or a creation of a website?</h2>
-<div class="buttonbox1">
-        <div class="changeradio">
-        <%= f.input :origin,
-                    as: :radio_buttons,
-                    collection: ['Creation'],
-                    input_html: { data: { action: "click->display-second-question#question"} }%>
-        <%= f.input :origin,
-                    as: :radio_buttons,
-                    collection: ['Update'],
-                    label: false, input_html: { data: { action: "click->display-second-question#notQuestion"} } %>
+  <div class="projectchoicebox">
+    <div class="imgprojectnew"></div>
+    <%= simple_form_for @project do |f| %>
+      <h2>First of all is your project an update</h2> <h2>or a creation of a website?</h2>
+        <div class="buttonbox1">
+          <div class="changeradio">
+            <%= f.input :origin,
+                        as: :radio_buttons,
+                        collection: ['Creation'],
+                        input_html: { data: { action: "click->display-second-question#question"} }%>
+            <%= f.input :origin,
+                        as: :radio_buttons,
+                        collection: ['Update'],
+                        label: false, input_html: { data: { action: "click->display-second-question#notQuestion"} } %>
+          </div>
         </div>
+  </div>
+
+        <div class="d-none" data-display-second-question-target= "display">
+          <div class="centertext">
+            <h2><%= f.label(:website, "Ok you need a brand new website, but what type do you need?") %></h2>
+          </div>
+          <div class="changeradio">
+            <div class="flexradio">
+              <%= f.input :website,
+                          as: :radio_buttons,
+                          collection: ['One Page', 'Vitrine', 'E-shop under 10 items', 'E-shop over 10 items', 'WebApp'] %>
+            </div>
+          </div>
+          <div class="container">
+            <div class="describe">
+              <h2>Describe your project and your needs in your own words:</h2>
+            </div>
+            <div class="description">
+              <%= f.input :title,
+                          required: true %>
+              <%= f.input :description,
+                          as: :text,
+                          required: true %>
+            </div>
+              <%= f.button :submit,
+                            "Submit your project",
+                            class: "bouton-moyen" %>
+          </div>
         </div>
-        </div>
-
-
-      <div class="d-none" data-display-second-question-target= "display">
-        <div class="centertext"><h2><%= f.label(:website, "Ok you need a brand new website, but what type do you need?") %></h2></div>
-      <div class="changeradio">
-<div class="flexradio">
-        <%= f.input :website,
-                    as: :radio_buttons,
-                    collection: ['One Page', 'Vitrine', 'E-shop under 10 items', 'E-shop over 10 items', 'WebApp'] %>
-        </div>
-</div>
-
-        <div class="describe"><h2>Describe your project and your needs in your own words:</h2></div>
-<div class="description">
-        <%= f.input :title,
-                    required: true %>
-        <%= f.input :description,
-                    as: :text,
-                    required: true %>
-</div>
-        <%= f.button :submit,
-                      "Submit your project",
-                      class: "bouton-moyen" %>
-
-
-      </div>
-  <% end %>
+    <% end %>
 </div>
 
 
