@@ -3,6 +3,7 @@ require "open-uri"
 User.destroy_all
 Project.destroy_all
 Chatroom.destroy_all
+Collaboration.destroy_all
 
 file = URI.open('https://avatars.githubusercontent.com/u/105067544?v=4')
 user = User.new(
@@ -14,13 +15,13 @@ user = User.new(
   phone_number: '0612345671',
   address: 'Martigues',
   siret: '123 456 789 00018',
-  number_of_projects: 25,
-  year_exp: 5,
+  number_of_projects: 20,
+  year_exp: 3,
   description: "I'm used to working with Ruby on Rails for the back, and ReactJs or html5/css3/Javascript for the front depending on the needs. I also like to discover new technologies or libraries when the project allows it!
   I can work on a site from A to Z as well as adapt to an ongoing project, web or mobile.
   Do not hesitate to look at my various professional experiences to know all the technologies on which I have been able to work and to contact me for further information.",
   skills: ['ruby', 'rails', 'python', 'javascript', 'java', 'html5', 'css3', 'react', 'wordpress', 'bootstrap'],
-  # score_exp: 85
+  # score_exp: 61
 )
 user.photo.attach(io: file, filename: 'marilou.jpeg', content_type: 'image/jpeg')
 user.save!
@@ -56,13 +57,13 @@ user = User.new(
   phone_number: '0612345674',
   address: 'Bourreac',
   siret: '789 123 456 00018',
-  number_of_projects: 90,
-  year_exp: 10,
+  number_of_projects: 5,
+  year_exp: 1,
   description: "Engineer for 6 years, I specialize in Java/JEE fullstack web development.
   During these five years, I had the opportunity to provide solutions to complex problems all at high availability and high performance.
   Data and exchange security has always been one of my top priorities (PCI-DSS standard).",
-  skills: ['ruby', 'python', 'javascript', 'java', 'html5', 'css3', 'react', 'rails', 'wordpress', 'bootstrap', 'photoshop', 'illustrator', 'woocommerce', 'php', 'csharp'],
-  # score_exp: 245
+  skills: ['ruby', 'rails','javascript', 'css3', 'html5'],
+  # score_exp: 19
 )
 user.photo.attach(io: file, filename: 'mathieu.jpg', content_type: 'image/jpeg')
 user.save!
@@ -77,13 +78,13 @@ user = User.new(
   phone_number: '0612375671',
   address: 'Nice',
   siret: '123 456 719 00018',
-  number_of_projects: 25,
-  year_exp: 5,
+  number_of_projects: 20,
+  year_exp: 3,
   description: "I'm used to working with Ruby on Rails for the back, and ReactJs or html5/css3/Javascript for the front depending on the needs. I also like to discover new technologies or libraries when the project allows it!
   I can work on a site from A to Z as well as adapt to an ongoing project, web or mobile.
   Do not hesitate to look at my various professional experiences to know all the technologies on which I have been able to work and to contact me for further information.",
   skills: ['ruby', 'python', 'javascript', 'java', 'html5', 'css3', 'react', 'rails', 'wordpress', 'bootstrap'],
-  # score_exp: 85
+  # score_exp: 61
 )
 user.photo.attach(io: file, filename: 'maewenn.jpg', content_type: 'image/jpeg')
 user.save!
@@ -92,7 +93,7 @@ file = URI.open('https://avatars.githubusercontent.com/u/95645345?v=4')
 user = User.new(
   role: 'freelancer',
   first_name: 'Jean-Guillaume',
-  last_name: 'Vicente',
+  last_name: 'Vicente de Marengo',
   email: 'jg@test.com',
   password: '123456',
   phone_number: '0612335672',
@@ -120,8 +121,8 @@ user = User.new(
   address: 'Marseille',
   siret: '789 123 125 00018',
   number_of_projects: 200,
-  year_exp: 10,
-  description: "Engineer for 6 years, I specialize in Java/JEE fullstack web development.
+  year_exp: 30,
+  description: "Main teacher at Le Wagon Marseille, I specialize in Java/JEE fullstack web development.
   During these five years, I had the opportunity to provide solutions to complex problems all at high availability and high performance.
   Data and exchange security has always been one of my top priorities (PCI-DSS standard).",
   skills: ['ruby', 'python', 'javascript', 'java', 'html5', 'css3', 'react', 'rails', 'wordpress', 'bootstrap', 'photoshop', 'illustrator', 'woocommerce', 'php', 'csharp'],
@@ -135,7 +136,7 @@ file = URI.open('https://avatars.githubusercontent.com/u/59578436?v=4')
 user = User.new(
   role: 'freelancer',
   first_name: 'Théo',
-  last_name: 'Bondaz dit "le monstre"',
+  last_name: 'Bondaz aka "le Brésilien"',
   email: 'tm@test.com',
   password: '123456',
   phone_number: '0712345673',
@@ -165,7 +166,7 @@ user = User.new(
   siret: '789 123 476 00018',
   number_of_projects: 90,
   year_exp: 10,
-  description: "Engineer for 6 years, I specialize in Java/JEE fullstack web development.
+  description: "Teacher at Le Wagon Nantes & Marseille. I specialize in Java/JEE fullstack web development.
   During these five years, I had the opportunity to provide solutions to complex problems all at high availability and high performance.
   Data and exchange security has always been one of my top priorities (PCI-DSS standard).",
   skills: ['ruby', 'python', 'javascript', 'java', 'html5', 'css3', 'react', 'rails', 'wordpress', 'bootstrap', 'photoshop', 'illustrator', 'woocommerce', 'php', 'csharp'],
@@ -221,15 +222,15 @@ file = URI.open('https://avatars.githubusercontent.com/u/414418?v=4')
 user = User.new(
   role: 'freelancer',
   first_name: 'Sébastien',
-  last_name: 'Saunier',
+  last_name: '"Holy" Saunier',
   email: 'ss@test.com',
   password: '123456',
   phone_number: '0614345674',
   address: 'Paris',
   siret: '789 123 456 00518',
   number_of_projects: 490,
-  year_exp: 10,
-  description: "CTO & Co-Founder @lewagon. Engineer for 6 years, I specialize in Java/JEE fullstack web development.
+  year_exp: 20,
+  description: "God of Code, worshiped by the #972 Batch. CTO & Co-Founder @lewagon. Engineer for 6 years, I specialize in Java/JEE fullstack web development.
   During these five years, I had the opportunity to provide solutions to complex problems all at high availability and high performance.
   Data and exchange security has always been one of my top priorities (PCI-DSS standard).",
   skills: ['ruby', 'python', 'javascript', 'java', 'html5', 'css3', 'react', 'rails', 'wordpress', 'bootstrap', 'photoshop', 'illustrator', 'woocommerce', 'php', 'csharp'],
@@ -252,8 +253,11 @@ User.create!(
 puts 'Users created successfully man!'
 
 Project.create!(
-  title: "e-Shop creation",
-  description: "I need an e-shop for my company, I don't know anything about web development, please help me!",
+  title: "Simple e-Shop ",
+  description: "My company needs an e-shop website for a new set of products.
+  There are 6 new references in our products catalogue we'd like to sell all over the country. 
+  The budget is restricted so the site won't be fancy and sophisticated. We just need a simple, quick and efficient payment solution. 
+  I'm available to discuss about it, thank you for your time.",
   origin: "Creation",
   website: "E-shop under 10 items",
   user_id: User.find_by(first_name: 'Jérome').id,
@@ -261,8 +265,8 @@ Project.create!(
 )
 
 Project.create!(
-  title: "One Page website",
-  description: "I need a one page website for my company, I don't know anything about web development, please help me!",
+  title: "Special event website",
+  description: "I need a one page website for a special event about a new product launch. It has to be really simple, it's just for adversing purpose. I need it as soon as possible. Contact me for more informations",
   origin: "Creation",
   website: "One Page",
   user_id: User.find_by(first_name: 'Jérome').id,
@@ -270,26 +274,10 @@ Project.create!(
 )
 
 Project.create!(
-  title: "Big eshop",
-  description: "We need a big eshop to sale different products in several categories. We don't have development department so we need a freelancer!",
-  origin: "Creation",
-  website: "E-shop over 10 items",
-  user_id: User.find_by(first_name: 'Jérome').id,
-  score_difficulty: 3
-)
-
-Project.create!(
-  title: "Webapp JM&Beer",
-  description: "We need a web app to serve automatically a beer to our customer.",
-  origin: "Creation",
-  website: "WebApp",
-  user_id: User.find_by(first_name: 'Jérome').id,
-  score_difficulty: 4
-)
-
-Project.create!(
-  title: "Webapp API Culteur",
-  description: "We need a web app but we don't know why.",
+  title: "Webapp 'API Culteur'",
+  description: "My company needs a Web app in order to reach Wordlwide reputation.
+  We want to export our honey all over the world with a delivery system. An app based on Deliveroo model would fit perfectly with our strategy and the growth of our business.
+  Please contact me for any further informations I will be glad to discuss about it!",
   origin: "Creation",
   website: "WebApp",
   user_id: User.find_by(first_name: 'Jérome').id,
@@ -301,3 +289,21 @@ puts 'Projects created successfully man!'
 Chatroom.create!(name: "Chatroom")
 
 puts 'Chatroom created successfully man!'
+
+Collaboration.create!(
+  title: "e-Shop implementation (small database)",
+  total_price: 1000,
+  project_id: Project.find_by(website: 'E-shop under 10 items').id,
+  user_id: User.find_by(first_name: 'Mathieu').id,
+  status: 'pending'
+)
+
+Collaboration.create!(
+  title: "Full development of a One Page Website",
+  total_price: 3500,
+  project_id: Project.find_by(website: 'One Page').id,
+  user_id: User.find_by(first_name: 'Mathieu').id,
+  status: 'accepted'
+)
+
+puts 'Collaborations created successfully man!'
