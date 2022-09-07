@@ -1,38 +1,23 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-  position: sticky;
-  top: 0;
-  z-index: 99;
-  position: absolute;
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
-// ----------------------------------------------------------------NOTRE NAV --------------------------------------------------------
-
-
 .navpassengers {
   top: 0;
-  position: absolute;
   z-index: 99;
   color: white;
-  width: 100vw;
+  width: 100%;
+  background-color: $gray;
+  height: 50px;
+  padding: 12px;
 
-
-  ul{
-    list-style: none;
+  .menu {
     display: flex;
-    justify-content: end;
-    font-family: Poppins;
-    height: 25px;
     text-align: center;
+    justify-content: space-between;
+
+    .sous-menu {
+    display: flex;
+    text-align: end;
+    }
   }
+
   a{
     text-decoration: none;
     padding: 0 15px;
@@ -51,23 +36,13 @@
     -moz-transition: width 0.2s ease-in-out;
     -ms-transition: width 0.2s ease-in-out;
     -o-transition: width 0.2s ease-in-out;
-}
+  }
 
-a:hover::after {
+  a:hover::after {
     width: 100%;
-}
-.log{
-  background-color: #272222;
-  color: white;
-  padding: 4px 4px;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 5px;
-}
+  }
+
+  li {
+    list-style: none;
+  }
 }
