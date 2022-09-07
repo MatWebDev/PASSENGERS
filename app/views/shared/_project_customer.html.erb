@@ -1,48 +1,108 @@
-<div class="cartes">
+<div class="freelancers">
   <h3>Take a look at this Freelancers selection powered by Passengers</h3>
 
   <% case @project.score_difficulty %>
   <% when 1 %>
     <% @junior_freelancers.each do |freelancer| %>
-      <div class="carte">
-        <p><strong><%= freelancer.first_name %> <%= freelancer.last_name %></strong></p>
-        <%# ajouter photo %>
-        <p><%= freelancer.skills.join(", ") %></p>
-        <p><%= freelancer.description %></p>
-        <%= link_to "Contact", chatroom_path(id: 1) %>
+      <div class="freelancer-card">
+        <div class="firstinfo">
+          <%= cl_image_tag freelancer.photo.key, height: 150, width: 150, crop: :fill %>
+          <div class="profileinfo">
+            <h1>
+              <%= freelancer.first_name %>
+              <%= freelancer.last_name %>
+            </h1>
+            <p class="bio"><%= freelancer.description %></p>
+            <%= link_to "Contact", chatroom_path(id: 1) %>
+          </div>
+        </div>
+      </div>
+      <div class="badgescard">
+        <% freelancer.skills.each do |skill|%>
+          <% if skill == 'react' %>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40"/>
+          <% else %>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/<%= skill %>/<%= skill %>-plain.svg" width="40" />
+          <% end %>
+        <% end %>
       </div>
   <% end %>
 
   <% when 2 %>
     <% @junior_intermediate_freelancers.each do |freelancer| %>
-      <div class="carte">
-        <p><strong><%= freelancer.first_name %> <%= freelancer.last_name %></strong></p>
-        <%# ajouter photo %>
-        <p><%= freelancer.skills.join(", ") %></p>
-        <p><%= freelancer.description %></p>
-        <%= link_to "Contact", chatroom_path(id: 1) %>
+      <div class="freelancer-card">
+        <div class="firstinfo">
+          <%= cl_image_tag freelancer.photo.key, height: 150, width: 150, crop: :fill %>
+          <div class="profileinfo">
+            <h1>
+              <%= freelancer.first_name %>
+              <%= freelancer.last_name %>
+            </h1>
+            <p class="bio"><%= freelancer.description %></p>
+            <%= link_to "Contact", chatroom_path(id: 1) %>
+          </div>
+        </div>
+      </div>
+      <div class="badgescard">
+        <% freelancer.skills.each do |skill|%>
+          <% if skill == 'react' %>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40"/>
+          <% else %>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/<%= skill %>/<%= skill %>-plain.svg" width="40" />
+          <% end %>
+        <% end %>
       </div>
   <% end %>
 
   <% when 3 %>
     <% @intermediate_freelancers.each do |freelancer| %>
-      <div class="carte">
-        <p><strong><%= freelancer.first_name %> <%= freelancer.last_name %></strong></p>
-        <%# ajouter photo %>
-        <p><%= freelancer.skills.join(", ") %></p>
-        <p><%= freelancer.description %></p>
-        <%= link_to "Contact", chatroom_path(id: 1) %>
+      <div class="freelancer-card">
+        <div class="firstinfo">
+          <%= cl_image_tag freelancer.photo.key, height: 150, width: 150, crop: :fill %>
+          <div class="profileinfo">
+            <h1>
+              <%= freelancer.first_name %>
+              <%= freelancer.last_name %>
+            </h1>
+            <p class="bio"><%= freelancer.description %></p>
+            <%= link_to "Contact", chatroom_path(id: 1) %>
+          </div>
+        </div>
+      </div>
+      <div class="badgescard">
+        <% freelancer.skills.each do |skill|%>
+          <% if skill == 'react' %>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40"/>
+          <% else %>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/<%= skill %>/<%= skill %>-plain.svg" width="40" />
+          <% end %>
+        <% end %>
       </div>
   <% end %>
 
   <% when 4 %>
     <% @senior_freelancers.each do |freelancer| %>
-      <div class="carte">
-        <p><strong><%= freelancer.first_name %> <%= freelancer.last_name %></strong></p>
-        <%# ajouter photo %>
-        <p><%= freelancer.skills.join(", ") %></p>
-        <p><em><%= freelancer.description %></em></p>
-        <%= link_to "Contact", chatroom_path(id: 1) %>
+      <div class="freelancer-card">
+        <div class="firstinfo">
+          <%= cl_image_tag freelancer.photo.key, height: 150, width: 150, crop: :fill %>
+          <div class="profileinfo">
+            <h1>
+              <%= freelancer.first_name %>
+              <%= freelancer.last_name %>
+            </h1>
+            <p class="bio"><%= freelancer.description %></p>
+            <%= link_to "Contact", chatroom_path(id: 1) %>
+          </div>
+        </div>
+      </div>
+      <div class="badgescard">
+        <% freelancer.skills.each do |skill|%>
+          <% if skill == 'react' %>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40"/>
+          <% else %>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/<%= skill %>/<%= skill %>-plain.svg" width="40" />
+          <% end %>
+        <% end %>
       </div>
     <% end %>
   <% end %>
