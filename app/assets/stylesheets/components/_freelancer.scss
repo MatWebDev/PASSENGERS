@@ -18,7 +18,6 @@
 .freelancer-card{  
  @include dimensions( 100%, 150px);
   padding: 50px;
-  margin-top: 30px;
   background-color: white;
   position: relative;
   overflow: hidden;
@@ -27,7 +26,7 @@
     content: '';
     display: block;
     width: 250px;
-    height: 500px;
+    height: 550px;
     background: $orange;
     
     position: absolute;
@@ -67,12 +66,32 @@
   }
   .profileinfo{
     padding: 0px 20px;
+    display: flex;
+    flex-direction: column;  
     p.bio{
       padding: 10px 0px;
       color: #5A5A5A;
       line-height: 1.2;
       font-style: initial;
     }  
+  }
+
+  .bio {
+    font-size: 20px;
+  }
+}
+
+.contact-btn {
+  align-self: flex-end;
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 18px;
+
+  a {
+    color: white;
+    text-decoration: none;
   }
 }
 
@@ -110,7 +129,7 @@
   width: 300px;
   height: 300px;
   display: block;
-  border-radius: 3px;
+ border-radius: 0px 0px 10px 10px;
   background-color: #ECECEC;
   font-family: Poppins;
   font-size: 24px;
@@ -165,7 +184,7 @@
   width: 300px;
   height: 300px;
   display: block;
-  border-radius: 3px;
+ border-radius: 0px 0px 10px 10px;
   background-color: #ECECEC;
   font-family: Poppins;
   font-size: 24px;

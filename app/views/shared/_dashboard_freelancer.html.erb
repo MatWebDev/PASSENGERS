@@ -40,14 +40,14 @@
           <div class="price"><%= collaboration.total_price %>€</div>            
           <div class="status"><%= collaboration.status.capitalize %></div>
         </div>
-        <% else %>
+      <% else %>
         <div class="collaboration-accepted">
           <div class="project-name"><%= collaboration.project.title.capitalize %></div>
           <div class="title"><%= collaboration.title.capitalize %></div> 
           <div class="price"><%= collaboration.total_price %>€</div>             
           <div class="status"><%= collaboration.status.capitalize %></div>
         </div>
-        <% end %>
       <% end %>
+    <% end %>
   </div>
 </div>
