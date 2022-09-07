@@ -1,3 +1,13 @@
+<div class="project-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="project-container">
+    <div class="project-div">
+      <div class="dashboard-div"><h1><%= @project.title %></h1></div>
+      <p><%= @project.description %></p>
+      <div class="proposed-by">Proposed by <%= @project.user.first_name %></div>
+    </div>
+  </div>
+</div>
+
 <div class="collaborations-customer">
   <div class="dashboard-div">
     <h2>My Quotes</h3>
