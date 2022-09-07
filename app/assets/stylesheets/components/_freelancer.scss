@@ -12,16 +12,13 @@
   width: 80%;
   margin: 0 auto;
   margin-top: 50px;
-
-  h2 {
-    margin-bottom: 35px;
-  }
 }
 
 
 .freelancer-card{  
  @include dimensions( 100%, 150px);
   padding: 50px;
+  margin-top: 30px;
   background-color: white;
   position: relative;
   overflow: hidden;
@@ -93,13 +90,14 @@
 }
 
 .collaborations-container {
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
 }
 
 .dashboard-div {
   border-bottom: 2px solid $orange;
-  padding: 15px;
+  padding: 15px 0px 8px 0px;
+  margin-bottom: 15px;
 }
 
 .collaborations {
