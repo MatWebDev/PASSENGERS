@@ -1,6 +1,5 @@
 .footer-clean {
   color:#4b4c4d;
-  margin-top: 100px;
   width: 100%;
   background-color: $gray;
   padding-top: 10px;
@@ -51,6 +50,10 @@
   margin-top: 10px!important;
 }
 
-.text-pass {
+#passengers {
   color: whitesmoke;
+}
+
+#passengers:hover {
+  color: rgba(245, 245, 245, 0.484);
 }

@@ -8,6 +8,19 @@
   </div>
 </div>
 
+<div class="fondproject">
+    <div class="containerproject">
+    <H2 class="texteblanc">We have somes projects for you</H2>
+        <div class="carteproject">
+            <div class="titreproject">
+                <h2><%= @project.title %></h2>
+            </div>
+            <div class="descriptionproject">
+              <p><%= @project.description %></p>
+              Proposed by <%= @project.user.first_name %>
+            </div>
+        </div>
+
 
   <% if current_user.role == "freelancer"  %>
   <%= render "shared/project_freelancer" %>
@@ -17,3 +30,5 @@
   <% if current_user.role == "customer"  %>
   <%= render "shared/project_customer" %>
   <% end %>
+  </div>
+</div>

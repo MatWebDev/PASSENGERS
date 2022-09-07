@@ -18,7 +18,7 @@
   h1 {
     text-align: center;
   }
-  p{
+  p {
     margin-top: 15px;
     margin-bottom: 15px;
     font-style: italic;
@@ -43,6 +43,7 @@
   margin: 30px 0px 30px 0px;
   display: flex;
 }
+
 
 .collabs-pending {
   overflow: hidden;
@@ -175,4 +176,51 @@
     width: 100%;
     padding: 10px;
   }
+}
+
+.fondproject {
+  background-color: #576a88;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 100px;
+}
+
+.containerproject {
+  width: 960px;
+  height: auto;
+  margin: 0 auto;
+}
+.carteproject {
+  background-image: url(tickets);
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 960px;
+  height: 502px;
+}
+.titreproject {
+  width: 747px;
+  padding-left: 411px;
+  text-align: end;
+  font-family: Poppins;
+  padding-top: 71px;
+}
+.descriptionproject {
+  width: 747px;
+  padding-left: 427px;
+  font-weight: bold;
+  text-align: end;
+  font-family: Poppins;
+  padding-top: 120px;
+}
+
+.centerbouton {
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+  margin-left: 50px;
+}
+.texteblanc{
+  padding-top: 25px;
+  color: whitesmoke;
 }
