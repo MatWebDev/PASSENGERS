@@ -4,6 +4,13 @@
   padding: 150px 0;
 }
 
+.project-customer {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
 .project-container {
   width: 80%;
   margin: 0 auto;
@@ -12,6 +19,7 @@
 
 .project-div {
   height: 50%;
+  border-radius: 0px 0px 10px 10px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.60);
   padding: 0px 30px 30px 30px;
