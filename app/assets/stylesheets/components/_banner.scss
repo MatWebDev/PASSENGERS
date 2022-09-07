@@ -41,8 +41,7 @@
 // ----------------------------------------------------------------FLECHE________________________________________________________________
 .arrow {
   padding-top: 70px;
-  position: absolute;
-  left: 50%;
+  // position: absolute;
   transform: translate(-50%, -50%);
   cursor: pointer;
 }
@@ -98,3 +97,104 @@
 //   opacity: .7;
 //   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 // }
+// ----------------------------------------------------------------Banner________________________________________________________________
+
+.banner-home {
+  background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(home-banner-passengers);
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  h1 {
+    color: $white;
+  }
+  .call-div {
+    margin-top: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+.call-to-action {
+  text-decoration: none;
+  padding: 8px 12px;
+  background-color: $orange;
+  color: $white;
+  border-radius: 4px;
+  &:hover {
+    color: $white;
+    background-color: $green;
+  }
+}
+
+.logo-home {
+  background-image: url(home_passengers_logo);
+  width: 500px;
+  height: 450px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cartes-container-home {
+  width: 1300px;
+  padding: 50px 0;
+  margin: 0 auto;
+  .cartes-flexbox {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+  }
+  h2 {
+    margin-bottom: 80px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 46px;
+    color: $black;
+  }
+  p {
+    text-align: center;
+  }
+  .blurred {
+    text-align: center;
+    // margin-top: 0;
+    line-height: 0;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    font-size: 100px;
+    filter: blur(6px);
+    opacity: 0.5;
+    color: grey;
+  }
+  .bottom-call {
+    text-align: center;
+    margin: 50px auto;
+  }
+}
+
+.carte-home {
+  background-color: $orange;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.picto {
+  color: $gray;
+  font-size: 30px;
+}
+
+.bottom-call-to-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}

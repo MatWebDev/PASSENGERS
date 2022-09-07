@@ -1,34 +1,62 @@
-<div class="banner">
-    <div class="text-box">
-        <h1>Passengers</h1>
-        <h2>You have an <span class="changecolor">idea?</span></h2>
-        <h2>We have <span class="changecolor">developpers</span></h2>
-          <a class="arrow" href="#project">
-                <span class="fleche"></span>
-                <span class="fleche"></span>
-                <span class="fleche"></span>
-          </a>
-    </div>
+<div class="banner-home">
+  <div class="logo-home">
+  </div>
+  <h1>Have a project? We have developpers!</h1>
+  <div class="call-div">
+    <%= link_to "Submit your project", new_project_path, class:"call-to-action" %>
+  </div>
+  <a class="arrow" href="#fonctionnement">
+    <span class="fleche"></span>
+    <span class="fleche"></span>
+    <span class="fleche"></span>
+  </a>
 </div>
-<div class="homecontainer" id = "project">
-    <div class="homecarte1">
-        <div class="textecartehome1">
-        <h3>Sumbit your project</h3>
-        <p>Have an idea?<br>Tell us more about your project!</p>
-        </div>
-    </div>
-    <div class="homecarte2">
-        <div class="textecartehome2">
-        <h3>We find the developers</h3>
-        <p>Passengers offers you the most suitable developers for your project</p>
 
-        </div>
+<div class="cartes-container-home" id="fonctionnement">
+  <h3 class="blurred">How we work</h3>
+  <h2>How we work</h2>
+  <div class="cartes-flexbox">
+    <div class="carte-home">
+      <div class="picto">
+        <i class="fa-solid fa-cloud-check"></i>
+      </div>
+      <div class="carte-title-home">
+        <h3>Submit your project</h3>
+      </div>
+      <div class="carte-description-home">
+        <p>Have an idea? Tell us more about your project and submit it to Passengers!</p>
+      </div>
     </div>
-    <div class="homecarte3">
-        <div class="textecartehome3">
+
+    <div class="carte-home">
+      <div class="picto">
+        <i class="fa-solid fa-code"></i>
+      </div>
+      <div class="carte-title-home">
+        <h3>We find a developper</h3>
+      </div>
+      <div class="carte-description-home">
+        <p>Passengers offers you the best selection of developers for your project!</p>
+      </div>
+    </div>
+
+    <div class="carte-home">
+      <div class="picto">
+        <i class="fa-sharp fa-solid fa-rocket-launch"></i>
+      </div>
+      <div class="carte-title-home">
         <h3>Collaborate together</h3>
-        <p>All you have to do is discuss your project and the adventure begins!</p>
-
-        </div>
+      </div>
+      <div class="carte-description-home">
+        <p>All you have to do is discuss your project with the developper you choose and the adventure begins!</p>
+      </div>
     </div>
+  </div>
+
+  <h3 class="blurred">Ready?</h3>
+  <h2>Ready for a nice trip?</h2>
+  <div class="bottom-call-to-action">
+    <%= link_to "Submit your project", new_project_path, class:"call-to-action" %>
+  </div>
 </div>
+
