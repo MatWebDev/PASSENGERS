@@ -23,8 +23,9 @@ input[type="radio"] {
   cursor: pointer;
 }
 .changeradio input[type="radio"]:checked + label {
-  background-color:#bfb;
-  border-color: #4c4;
+  background-color: rgb(230, 172, 65);
+  border: 1px solid black;
+  color: black;
 }
 
 .changeradio input[type="radio"]:focus + label {
@@ -79,6 +80,7 @@ input[type="radio"] {
 .describe{
 margin-top: 45px;
 }
+
 .description{
   width: 400px;
 }
