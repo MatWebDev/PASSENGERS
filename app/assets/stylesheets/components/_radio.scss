@@ -6,6 +6,16 @@
     padding: 0;
 }
 
+.container {
+  margin-right: 100px!important;
+}
+
+#bouton-moyen-new-project {
+  width: 20%!important;
+  margin-left: 285px!important;
+}
+
+
 input[type="radio"] {
   opacity: 0;
   position: fixed;
@@ -83,4 +93,5 @@ margin-top: 45px;
 
 .description{
   width: 400px;
+  margin-left: 160px;
 }

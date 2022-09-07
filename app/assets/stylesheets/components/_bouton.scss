@@ -23,6 +23,12 @@
     -webkit-user-select: none;
     touch-action: manipulation;
     vertical-align: middle;
+
+    a {
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+    }
   }
 
   .bouton-moyen:hover,
@@ -71,6 +77,17 @@
 
   .bouton-large:active {
     opacity: .5;
+  }
+
+  .centerbouton {
+    margin: 0 auto;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
   }
 
 // BOUTONS GITHUB FOOTER

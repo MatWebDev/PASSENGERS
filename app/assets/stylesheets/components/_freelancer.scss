@@ -39,7 +39,7 @@
     margin-bottom: 75px;
     display: flex;
     padding: 10px 20px;
-    border-radius: 3px;
+    border-radius: 0px 0px 10px 10px;
     background-color: #ECECEC;
     width: 95%; 
     height: 65px;
@@ -129,7 +129,7 @@
   width: 300px;
   height: 300px;
   display: block;
- border-radius: 0px 0px 10px 10px;
+  border-radius: 0px 0px 10px 10px;
   background-color: #ECECEC;
   font-family: Poppins;
   font-size: 24px;
