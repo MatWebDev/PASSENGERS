@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>We're sorry, but something went wrong (500)</title>
+  <title>The page you were looking for doesn't exist (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
   <style>
-  .rails-default-error-page {
+  /* .rails-default-error-page {
     background-color: #EFEFEF;
     color: #2E2F30;
     text-align: center;
@@ -50,17 +53,85 @@
     border-top-color: #DADADA;
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+  } */
+  img {
+    width: 500px;
   }
+  .error {
+    display: flex;
+    justify-content: center;
+  }
+  .error-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  body {
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 40px;
+    font-family: Poppins;
+  }
+  p {
+    font-size: 20px;
+    line-height: 8px;
+    margin-top: 0;
+    font-family: Poppins;
+  }
+  .bouton-moyen {
+    background: orange;
+    border: 1px solid orange;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 10px 16px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: 140px;
+    margin: 30px 260px;
+  }
+  a {
+    text-decoration: none;
+  }
+
   </style>
+
+
 </head>
 
-<body class="rails-default-error-page">
-  <!-- This file lives in public/500.html -->
-  <div class="dialog">
-    <div>
-      <h1>We're sorry, but something went wrong.</h1>
+<body>
+  <!-- This file lives in public/404.html -->
+  <div class="container">
+    <div class="error">
+      <img src="./500 error.jpg" alt="404 error">
+      <div class="error-text">
+        <h1>Something went wrong!</h1>
+        <p>If you are the application owner check the logs for more information.</p>
+        <a href="http://www.passengers-lewagon.lol" class="bouton-moyen">Back to Home</a>
+      </div>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
   </div>
 </body>
 </html>
