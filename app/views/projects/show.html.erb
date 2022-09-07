@@ -8,13 +8,12 @@
   </div>
 </div>
 
-<% if current_user.role == "freelancer"  %>
-<%= render "shared/project_freelancer" %>
-<% end %>
+
+  <% if current_user.role == "freelancer"  %>
+  <%= render "shared/project_freelancer" %>
+  <% end %>
 
 
-<% if current_user.role == "customer"  %>
-<%= render "shared/project_customer" %>
-<% end %>
-
-<%= link_to "Home", root_path %>
+  <% if current_user.role == "customer"  %>
+  <%= render "shared/project_customer" %>
+  <% end %>

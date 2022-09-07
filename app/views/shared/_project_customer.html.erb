@@ -1,6 +1,33 @@
-<div class="freelancers">
-  <h2>Take a look at this Freelancers selection powered by Passengers</h2>
+<div class="collaborations-customer">
+  <div class="dashboard-div">
+    <h2>My Quotes</h3>
+  </div>
+  
+    <% if @collaborations.each do |collaboration| %>
+      <div class="collabs">        
+        <div class="user-full-name">
+          <%= collaboration.user.first_name %>
+          <%= collaboration.user.last_name %>
+        </div>
+        <div class="collab-title"><%= collaboration.title %></div>
+        <%= 'for' %>
+        <div class="collab-price"><%= collaboration.total_price %><%= '€' %></div>
+        <div class="collab-status"><%= collaboration.status.capitalize %></div>
+        <% if collaboration.status == 'pending' %>
+          <%= link_to "Accept", project_collaboration_path(@project, collaboration), data: {turbo_method: :patch} %>
+          <%= link_to "Decline", root_path  %>
+        <% end %>
+      </div>
+    <% end.empty? %>
+      <p>No quotes received yet, see the selection of freelancers below.</p>
+    <% end %>
+</div>
 
+<div class="freelancers">
+  <div class="dashboard-div">
+    <h2>Take a look at this Freelancers selection powered by Passengers</h2>
+  </div>
+  
   <% case @project.score_difficulty %>
   <% when 1 %>
     <% @junior_freelancers.each do |freelancer| %>
@@ -106,20 +133,7 @@
       </div>
     <% end %>
   <% end %>
-
-  <h3>Collaborations</h3>
-<div class="cartes">
-    <% @collaborations.each do |collaboration| %>
-      <div class="carte">
-        <%= collaboration.user.first_name %>
-        <%= collaboration.user.last_name %>
-        <%= collaboration.title %>
-        <%= collaboration.total_price %>
-        <%= collaboration.status.capitalize %>
-        <% if collaboration.status == 'pending' %>
-          <%= link_to "Accept", project_collaboration_path(@project, collaboration), data: {turbo_method: :patch} %>
-          <%= link_to "Decline", root_path  %>
-        <% end %>
-      </div>
-    <% end %>
 </div>
+
+  
+

@@ -1,25 +1,24 @@
-  <div class="freelancer-card">
-    <div class="firstinfo">
-      <%= cl_image_tag current_user.photo.key, height: 150, width: 150, crop: :fill %>
-      <div class="profileinfo">
-        <h1>Welcome
-          <%= current_user.first_name %>
-          <%= current_user.last_name %>
-        </h1>
-         <p class="bio"><%= current_user.description %></p>
-      </div>
+<div class="freelancer-card">
+  <div class="firstinfo">
+    <%= cl_image_tag current_user.photo.key, height: 150, width: 150, crop: :fill %>
+    <div class="profileinfo">
+      <h1>Welcome
+        <%= current_user.first_name %>
+        <%= current_user.last_name %>
+      </h1>
+      <p class="bio"><%= current_user.description %></p>
     </div>
   </div>
 </div>
-  <div class="badgescard">
-    <% current_user.skills.each do |skill|%>
-      <% if skill == 'react' %>
+<div class="badgescard">
+  <% current_user.skills.each do |skill|%>
+    <% if skill == 'react' %>
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40"/>
-      <% else %>
+    <% else %>
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/<%= skill %>/<%= skill %>-plain.svg" width="40" />
-      <% end %>
     <% end %>
-  </div>
+  <% end %>
+</div>
 
 
 <div class="free-projects">
