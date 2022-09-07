@@ -7,6 +7,11 @@
         <%= current_user.last_name %>
       </h1>
       <p class="bio"><%= current_user.description %></p>
+      <% if current_user.year_exp <= 1 %>
+        <p class="experience">{<strong><%= current_user.year_exp %></strong> year of experience  <strong>  +<%= current_user.number_of_projects %></strong> completed projects}</p>
+      <% else %>
+        <p class="experience">{<strong><%= current_user.year_exp %></strong> years of experience  <strong>  +<%= current_user.number_of_projects %></strong> completed projects}</p>
+      <% end %>
     </div>
   </div>
 </div>
@@ -32,7 +37,7 @@
   </div>
 
   <div class="collaborations">
-    <% @collaborations.each do |collaboration| %>
+    <% if @collaborations.each do |collaboration| %>
       <% if collaboration.status == 'pending' %>
         <div class="collaboration-pending">
           <div class="project-name"><%= collaboration.project.title.capitalize %></div>
@@ -48,6 +53,8 @@
           <div class="status"><%= collaboration.status.capitalize %></div>
         </div>
       <% end %>
+    <% end.empty? %>
+      <p>You have not send any quotes yet! It's time to seek your futur project, click on the link above!</p>
     <% end %>
   </div>
 </div>
