@@ -1,11 +1,29 @@
-<div class="project-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<% case @project.website %>
+<% when 'E-shop under 10 items' || 'E-shop over 10 items' %>
+<div class="project-banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(<%= asset_path 'e_shop2.jpg' %>);">
   <div class="project-container">
     <div class="project-title">
       <h1><%= @project.title %></h1>
     </div>
   </div>
 </div> 
-
+<% when 'WebApp' %>
+<div class="project-banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(<%= asset_path 'webapp.jpg' %>);">
+  <div class="project-container">
+    <div class="project-title">
+      <h1><%= @project.title %></h1>
+    </div>
+  </div>
+</div> 
+<% else %>
+<div class="project-banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(<%= asset_path 'simple_web.jpg' %>);">
+  <div class="project-container">
+    <div class="project-title">
+      <h1><%= @project.title %></h1>
+    </div>
+  </div>
+</div> 
+<% end %>
 
 <div class="collaborations-customer">
   <div class="dashboard-div">
@@ -19,3 +37,5 @@
     <div class="bouton-moyen"><%= link_to "Contact #{@project.user.first_name}", chatroom_path(@chatroom) %></div>  
   </div>
 </div>
+
+

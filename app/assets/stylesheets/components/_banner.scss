@@ -112,6 +112,7 @@
   align-items: center;
   h1 {
     color: $white;
+    
   }
   .call-div {
     margin-top: 24px;
@@ -125,6 +126,7 @@
   background-color: $orange;
   color: $white;
   border-radius: 4px;
+  font-size: 24px;
   &:hover {
     color: $white;
     background-color: $green;
