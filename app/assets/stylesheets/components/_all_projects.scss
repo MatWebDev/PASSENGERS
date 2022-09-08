@@ -1,0 +1,51 @@
+.all-projects-banner {
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+
+  h1 {
+    text-align: center;
+    color: white;
+    background: black;
+    opacity: 70%;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 15px;
+    border-radius: 5px;
+  }
+}
+
+.all-projects-container {
+  margin-top: 20px;
+  padding: 50px;
+
+  h2 {
+    margin-bottom: 40px;
+  }
+}
+
+.freelance-projects {
+  @include dimensions( 100%, 150px);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  transform: translateX(0px);
+  background: linear-gradient(to left, whitesmoke 10%, #ec9108be 50%) right;
+  background-size: 200%;
+  transition: .7s ease-in-out;
+
+  a {
+    color: $gray
+  }
+}
+
+.freelance-projects:hover {
+  transform-origin:center;
+  transform: translateX(-30px);
+  background-position: left;
+  background: linear-gradient(to right, whitesmoke 10%, #ec9108be 50%) left;
+  transition: .7s ease-in-out;
+
+}
