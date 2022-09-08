@@ -1,9 +1,9 @@
 %reset { margin: 0; padding: 0; }
 %flex { display: flex; justify-content: center; align-items: center; }
- 
-@mixin animated($timein: null, $delay: null) { 
+
+@mixin animated($timein: null, $delay: null) {
  transition: all $timein ease-in-out;
-  transition-delay: $delay; 
+  transition-delay: $delay;
 }
 
 @mixin dimensions($width: null, $height: null) { width: $width; min-height: $height; }
@@ -12,10 +12,15 @@
   width: 80%;
   margin: 0 auto;
   margin-top: 50px;
+  
+  a {
+    text-decoration: none;
+    color: $gray;
+  }
 }
 
 
-.freelancer-card{  
+.freelancer-card{
  @include dimensions( 100%, 150px);
   padding: 50px;
   background-color: white;
@@ -28,7 +33,7 @@
     width: 250px;
     height: 550px;
     background: $orange;
-    
+
     position: absolute;
     animation: rotatemagic 0.75s cubic-bezier(0.425, 1.040, 0.470, 1.105) 1s both;
 }
@@ -41,25 +46,25 @@
     padding: 10px 20px;
     border-radius: 0px 0px 10px 10px;
     background-color: #ECECEC;
-    width: 95%; 
+    width: 95%;
     height: 65px;
     justify-content: space-around;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-    z-index: -1; 
+    z-index: -1;
     position: relative;
     animation-name: drop;
     animation-duration: 3s;
-    img { 
+    img {
       filter: saturate(0.7);
     }
-  }   
+  }
 
 .firstinfo{
   @extend %flex;
-  flex-direction: row;  
+  flex-direction: row;
   z-index:2;
   position: relative;
-  img{ 
+  img{
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -68,14 +73,14 @@
     padding: 0px 20px;
     display: flex;
     justify-content: center;
-    flex-direction: column;  
+    flex-direction: column;
     p.bio{
       padding: 10px 0px;
       color: #2c2c2cd8;
       line-height: 1.2;
       font-style: initial;
       margin-bottom: 0px;
-    }  
+    }
   }
 
   .bio {
@@ -87,14 +92,14 @@
   padding: 0px 20px;
   display: flex;
   justify-content: center;
-  flex-direction: column;  
+  flex-direction: column;
   p.bio{
     padding: 10px 0px;
     color: #2c2c2cd8;
     line-height: 1.9;
     font-style: initial;
     margin-bottom: 0px;
-  }  
+  }
 }
 
 .experience {
@@ -124,23 +129,23 @@
 // --------------------------freelancer card animations------------------------
 
 @keyframes drop{
-  0%{ 
+  0%{
     opacity: 0;
     top: -70px;}
-  100%{  
-    opacity: 1;  
+  100%{
+    opacity: 1;
     top: 0px;}
 }
 
 @keyframes animatop{
-  0%{ 
+  0%{
     opacity: 0;
     bottom: -500px;}
-  100%{  
-   opacity: 1;  
+  100%{
+   opacity: 1;
   bottom: 0px;}
 }
- 
+
 
 @keyframes rotatemagic{
   0%{
@@ -150,7 +155,7 @@
     left: -253px;
   }
   100%{
-    
+
     transform: rotate(-30deg);
     top: -24px;
     left: -100px;
@@ -248,7 +253,7 @@
     width: 100%;
     bottom: 20%;
   }
-  
+
   .status{
     text-align: center;
     font-weight: 500;
@@ -303,7 +308,7 @@
     width: 100%;
     bottom: 20%;
   }
-  
+
   .status{
     text-align: center;
     font-weight: 500;
