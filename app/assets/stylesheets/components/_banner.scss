@@ -79,7 +79,8 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
-  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("pexels-fauxels-3183153");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("pexels-fauxels-3183153");
 }
 
 .banner-project-form h1 {
@@ -88,8 +89,6 @@
   text-shadow: #474747 3px 5px 2px;
   font-weight: bold;
 }
-
-
 
 // .banner-project-form p {
 //   font-size: 20px;
@@ -100,7 +99,8 @@
 // ----------------------------------------------------------------Banner________________________________________________________________
 
 .banner-home {
-  background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(home-banner-passengers);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(home-banner-passengers);
   width: 100vw;
   height: 100vh;
   background-position: center;
@@ -174,6 +174,10 @@
     text-align: center;
     margin: 50px auto;
   }
+}
+
+#carte-home {
+  background-color: $green;
 }
 
 .carte-home {
