@@ -1,12 +1,23 @@
-<div class="d-flex"><h1>Welcome <%= current_user.first_name %> <%= current_user.last_name %></h1></div>
-<div class="container">
+<div class="freelancer-card">
+
+  <div class="firstinfo">
+    <div class="profileinfo">
+      <h1 class="welcomecustomer">Welcome on your dashboard <br>
+        <%= current_user.first_name %>
+        <%= current_user.last_name %>
+      </h1>
+    </div>
+  </div>
+</div>
+<div class="current"><h1>your current proposal</h1></div>
+<div class="containercustomer">
   <% @projects.each do |project| %>
     <%= link_to project_path(project) do %>
       <div class="carte-project">
         <div class="carte-content">
+          <i class="fa-solid fa-cloud-arrow-up"></i>
           <h2><%= project.title %></h2>
           <p><%= project.description %></p>
-          <p>Project proposed by <%= project.user.first_name %></p>
         </div>
         <%= link_to project_path(project), data: {turbo_method: :delete} do %>
           <i class="fa-regular fa-trash-can" id="poubelle"></i>
@@ -16,7 +27,7 @@
   <% end %>
   <div class="plus">
     <%= link_to new_project_path do %>
-      <i class="fa-solid fa-circle-plus" id="add-project"></i>
+      <i class="fa-solid fa-circle-plus" id="add-project"></i><span> Add a new Project</span>
     <% end %>
   </div>
 </div>
