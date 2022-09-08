@@ -253,11 +253,8 @@ User.create!(
 puts 'Users created successfully man!'
 
 Project.create!(
-  title: "Simple e-Shop ",
-  description: "My company needs an e-shop website for a new set of products.
-  There are 6 new references in our products catalogue we'd like to sell all over the country. 
-  The budget is restricted so the site won't be fancy and sophisticated. We just need a simple, quick and efficient payment solution. 
-  I'm available to discuss about it, thank you for your time.",
+  title: "Handmade Jewelry E-shop",
+  description: "I make handmade jewelry. My business is growing and I would like to sell my jewelry on my own sales website.",
   origin: "Creation",
   website: "E-shop under 10 items",
   user_id: User.find_by(first_name: 'Jérome').id,
@@ -265,10 +262,10 @@ Project.create!(
 )
 
 Project.create!(
-  title: "Special event website",
-  description: "I need a one page website for a special event about a new product launch. It has to be really simple, it's just for adversing purpose. I need it as soon as possible. Contact me for more informations",
+  title: "Showcase website for Locksmith",
+  description: "I am a locksmith in Marseille, I have a shop but I would like to extend my activity throughout the region. So I would like to have a site to show my activity on the internet and find new customer.",
   origin: "Creation",
-  website: "One Page",
+  website: "Vitrine",
   user_id: User.find_by(first_name: 'Jérome').id,
   score_difficulty: 1
 )
@@ -291,17 +288,17 @@ Chatroom.create!(name: "Chatroom")
 puts 'Chatroom created successfully man!'
 
 Collaboration.create!(
-  title: "e-Shop implementation (small database)",
-  total_price: 1000,
-  project_id: Project.find_by(website: 'E-shop under 10 items').id,
+  title: "Key of success for your business!",
+  total_price: 1500,
+  project_id: Project.find_by(title: "Showcase website for Locksmith").id,
   user_id: User.find_by(first_name: 'Mathieu').id,
   status: 'pending'
 )
 
 Collaboration.create!(
-  title: "Full development of a One Page Website",
-  total_price: 3500,
-  project_id: Project.find_by(website: 'One Page').id,
+  title: "Boost your jewels!",
+  total_price: 3000,
+  project_id: Project.find_by(title: "Handmade Jewelry E-shop").id,
   user_id: User.find_by(first_name: 'Mathieu').id,
   status: 'accepted'
 )
