@@ -11,8 +11,8 @@
 }
 
 #bouton-moyen-new-project {
-  width: 20%!important;
-  margin-left: 285px!important;
+  width: auto;
+  margin: 0 auto 50px auto;
 }
 
 
@@ -20,6 +20,14 @@ input[type="radio"] {
   opacity: 0;
   position: fixed;
   width: 0;
+}
+
+.changeradio {
+  display: flex;
+  justify-content: center;
+  .form-check {
+    padding: 0 12px;
+  }
 }
 
 .changeradio label {
@@ -62,8 +70,9 @@ input[type="radio"] {
 
 .projectchoicebox{
   display: flex;
+  flex-direction: column;
   margin-top: 35px;
-  margin-left: 80px;
+  // margin-left: 80px;
   justify-content: center;
   align-items: center;
 }
@@ -82,9 +91,18 @@ input[type="radio"] {
   margin-top: 20px;
 }
 
-.centertext h2{
-  text-align: center;
-  margin-top: 25px;
+.website-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 70px;
+  h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .flexradio {
+    text-align: center;
+  }
 }
 
 .describe{
@@ -92,6 +110,9 @@ margin-top: 45px;
 }
 
 .description{
-  width: 400px;
-  margin-left: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 800px;
+  margin: 0 auto;
 }
