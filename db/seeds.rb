@@ -2,7 +2,6 @@ require "open-uri"
 
 User.destroy_all
 Project.destroy_all
-Chatroom.destroy_all
 Collaboration.destroy_all
 
 file = URI.open('https://avatars.githubusercontent.com/u/105067544?v=4')
@@ -47,6 +46,27 @@ user = User.new(
 user.photo.attach(io: file, filename: 'guillaume.jpg', content_type: 'image/jpeg')
 user.save!
 
+file = URI.open('https://avatars.githubusercontent.com/u/102875112?v=4')
+user = User.new(
+  role: 'freelancer',
+  first_name: 'Jérome',
+  last_name: 'Pomonti',
+  email: 'jerome@test.com',
+  password: '123456',
+  phone_number: '0612365674',
+  address: 'Nouméa',
+  siret: '789 123 456 00218',
+  number_of_projects: 5,
+  year_exp: 1,
+  description: "Freelancer Graphist and teacher for 6 years, I specialize in Java/JEE fullstack web development.
+  During these five years, I had the opportunity to provide solutions to complex problems all at high availability and high performance.
+  Data and exchange security has always been one of my top priorities (PCI-DSS standard).",
+  skills: ['ruby', 'rails','javascript', 'css3', 'html5'],
+  # score_exp: 19
+)
+user.photo.attach(io: file, filename: 'mathieu.jpg', content_type: 'image/jpeg')
+user.save!
+
 file = URI.open('https://avatars.githubusercontent.com/u/105813372?v=4')
 user = User.new(
   role: 'freelancer',
@@ -66,7 +86,7 @@ user = User.new(
   # score_exp: 19
 )
 user.photo.attach(io: file, filename: 'mathieu.jpg', content_type: 'image/jpeg')
-user.save!
+user.save! 
 
 file = URI.open('https://avatars.githubusercontent.com/u/91216872?v=4')
 user = User.new(
@@ -228,11 +248,9 @@ user = User.new(
   phone_number: '0614345674',
   address: 'Paris',
   siret: '789 123 456 00518',
-  number_of_projects: 490,
-  year_exp: 20,
-  description: "God of Code, worshiped by the #972 Batch. CTO & Co-Founder @lewagon. Engineer for 6 years, I specialize in Java/JEE fullstack web development.
-  During these five years, I had the opportunity to provide solutions to complex problems all at high availability and high performance.
-  Data and exchange security has always been one of my top priorities (PCI-DSS standard).",
+  number_of_projects: 25,
+  year_exp: 2,
+  description: "CTO & Co-Founder @lewagon, God of Code, worshiped by the #972 Batch. Thank you very much for your video classes.",
   skills: ['ruby', 'python', 'javascript', 'java', 'html5', 'css3', 'react', 'rails', 'wordpress', 'bootstrap', 'photoshop', 'illustrator', 'woocommerce', 'php', 'csharp'],
   # score_exp: 245
 )
@@ -241,9 +259,9 @@ user.save!
 
 User.create!(
   role: 'customer',
-  first_name: 'Jérome',
-  last_name: 'Pomonti',
-  email: 'jerome@test.com',
+  first_name: 'Winnie',
+  last_name: 'The Pooh',
+  email: 'client@test.com',
   password: '123456',
   phone_number: '0612345685',
   address: 'Nouméa',
@@ -254,19 +272,21 @@ puts 'Users created successfully man!'
 
 Project.create!(
   title: "Handmade Jewelry E-shop",
-  description: "I make handmade jewelry. My business is growing and I would like to sell my jewelry on my own sales website.",
+  description: "I make handmade jewelry. My business is growing and I would like to sell my jewelry on my own sales website. I need a website as soon as possible. 
+  Please contact me for any further informations.",
   origin: "Creation",
   website: "E-shop under 10 items",
-  user_id: User.find_by(first_name: 'Jérome').id,
+  user_id: User.find_by(first_name: 'Winnie').id,
   score_difficulty: 2
 )
 
 Project.create!(
   title: "Showcase website for Locksmith",
-  description: "I am a locksmith in Marseille, I have a shop but I would like to extend my activity throughout the region. So I would like to have a site to show my activity on the internet and find new customer.",
+  description: "I am a locksmith in Marseille, I have a shop but I would like to extend my activity throughout the region. 
+  So I would like to have a site to show my activity on the internet and find new customer.",
   origin: "Creation",
   website: "Vitrine",
-  user_id: User.find_by(first_name: 'Jérome').id,
+  user_id: User.find_by(first_name: 'Winnie').id,
   score_difficulty: 1
 )
 
@@ -277,15 +297,11 @@ Project.create!(
   Please contact me for any further informations I will be glad to discuss about it!",
   origin: "Creation",
   website: "WebApp",
-  user_id: User.find_by(first_name: 'Jérome').id,
+  user_id: User.find_by(first_name: 'Winnie').id,
   score_difficulty: 4
 )
 
 puts 'Projects created successfully man!'
-
-Chatroom.create!(name: "Chatroom")
-
-puts 'Chatroom created successfully man!'
 
 Collaboration.create!(
   title: "Key of success for your business!",
