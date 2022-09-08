@@ -2,18 +2,20 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
-}
-
-.project-customer {
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  padding: 150px 0;
+  height: 50vh;
+  display: flex;
+  align-items: center;
 }
 
 .project-container {
   width: 80%;
   margin: 0 auto;
+}
+
+.project-title {
+  color: white;
+  font-size: 40px;
+  text-align: center;
 }
 
 
@@ -46,6 +48,19 @@
   width: 80%;
   margin: 0 auto;
   margin-top: 50px;
+
+  p {
+    font-size: 20px;
+    margin-bottom: 50px;
+    line-height: 1.6;
+  }
+
+  .proposed-by {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 50px;
+  }
 }
 
 .collabs {
