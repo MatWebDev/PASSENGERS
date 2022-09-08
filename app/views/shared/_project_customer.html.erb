@@ -71,7 +71,7 @@
             </h1>
             <p class="bio"><%= freelancer.description %></p>
             <p class="experience"><strong><%= freelancer.year_exp %></strong> year of experience  <strong>  +<%= freelancer.number_of_projects %></strong> completed projects</p>
-            <div class="contact-btn"><%= link_to "Contact Me", chatroom_path(id: 1), class:"bouton-moyen"  %></div>
+            <div class="contact-btn"><%= link_to "Contact Me", chatroom_path(@chatroom), class:"bouton-moyen"  %></div>
           </div>
         </div>
       </div>
@@ -98,7 +98,7 @@
             </h1>
             <p class="bio"><%= freelancer.description %></p>
             <p class="experience"><strong><%= freelancer.year_exp %></strong> years of experience  <strong>  +<%= freelancer.number_of_projects %></strong> completed projects</p>
-            <div class="contact-btn"><%= link_to "Contact Me", chatroom_path(id: 1), class:"bouton-moyen" %></div>
+            <div class="contact-btn"><%= link_to "Contact Me", chatroom_path(@chatroom), class:"bouton-moyen" %></div>
           </div>
         </div>
       </div>
@@ -125,7 +125,7 @@
             </h1>
             <p class="bio"><%= freelancer.description %></p>
             <p class="experience"><strong><%= freelancer.year_exp %></strong> years of experience  <strong>  +<%= freelancer.number_of_projects %></strong> completed projects</p>
-            <div class="contact-btn"><%= link_to "Contact Me", chatroom_path(id: 1), class:"bouton-moyen" %></div>
+            <div class="contact-btn"><%= link_to "Contact Me", chatroom_path(@chatroom), class:"bouton-moyen" %></div>
           </div>
         </div>
       </div>
@@ -152,7 +152,7 @@
             </h1>
             <p class="bio"><%= freelancer.description %></p>
             <p class="experience"><strong><%= freelancer.year_exp %></strong> years of experience  <strong>  +<%= freelancer.number_of_projects %></strong> completed projects</p>
-            <div class="contact-btn"><%= link_to "Contact Me", chatroom_path(id: 1), class:"bouton-moyen" %></div>
+            <div class="contact-btn"><%= link_to "Contact Me", chatroom_path(@chatroom), class:"bouton-moyen" %></div>
           </div>
         </div>
       </div>

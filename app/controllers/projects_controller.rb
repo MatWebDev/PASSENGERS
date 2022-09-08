@@ -12,6 +12,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    @chatroom = Chatroom.create!(name: 'Chatroom')
     @project = Project.find(params[:id])
     @collaborations = Collaboration.where(project_id: @project.id)
     # a verifier
