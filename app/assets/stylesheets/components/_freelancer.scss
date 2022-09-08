@@ -17,7 +17,6 @@
 
 .freelancer-card{  
  @include dimensions( 100%, 150px);
-  height: 300px;
   padding: 50px;
   background-color: white;
   position: relative;
@@ -72,7 +71,7 @@
     flex-direction: column;  
     p.bio{
       padding: 10px 0px;
-      color: #5A5A5A;
+      color: #2c2c2cd8;
       line-height: 1.2;
       font-style: initial;
       margin-bottom: 0px;
@@ -84,10 +83,25 @@
   }
 }
 
+.profileinfo-dash{
+  padding: 0px 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;  
+  p.bio{
+    padding: 10px 0px;
+    color: #2c2c2cd8;
+    line-height: 1.9;
+    font-style: initial;
+    margin-bottom: 0px;
+  }  
+}
+
 .experience {
   margin-bottom: 0px;
   font-size: 18px;
   font-weight: 400;
+  color: #2c2c2cd8;
 
   strong {
     color: $orange;
@@ -107,6 +121,57 @@
   }
 }
 
+// --------------------------freelancer card animations------------------------
+
+@keyframes drop{
+  0%{ 
+    opacity: 0;
+    top: -70px;}
+  100%{  
+    opacity: 1;  
+    top: 0px;}
+}
+
+@keyframes animatop{
+  0%{ 
+    opacity: 0;
+    bottom: -500px;}
+  100%{  
+   opacity: 1;  
+  bottom: 0px;}
+}
+ 
+
+@keyframes rotatemagic{
+  0%{
+    opacity: 0;
+    transform: rotate(-0deg);
+    top: -24px;
+    left: -253px;
+  }
+  100%{
+    
+    transform: rotate(-30deg);
+    top: -24px;
+    left: -100px;
+  }
+}
+
+@keyframes animate {
+  0%{
+      opacity: 0;
+      transform: rotate(15deg) translate(-20px,-20px);
+  }
+  50%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+      transform: rotate(15deg) translate(20px,20px);
+  }
+}
+
+// --------------------------projects------------------------
 .free-projects {
   display: block;
   text-align: center;
@@ -252,54 +317,6 @@
   }
 }
 
-
-@keyframes drop{
-  0%{ 
-    opacity: 0;
-    top: -70px;}
-  100%{  
-    opacity: 1;  
-    top: 0px;}
-}
-
-@keyframes animatop{
-  0%{ 
-    opacity: 0;
-    bottom: -500px;}
-  100%{  
-   opacity: 1;  
-  bottom: 0px;}
-}
- 
-
-@keyframes rotatemagic{
-  0%{
-    opacity: 0;
-    transform: rotate(-0deg);
-    top: -24px;
-    left: -253px;
-  }
-  100%{
-    
-    transform: rotate(-30deg);
-    top: -24px;
-    left: -78px;
-  }
-}
-
-@keyframes animate {
-  0%{
-      opacity: 0;
-      transform: rotate(15deg) translate(-20px,-20px);
-  }
-  50%{
-      opacity: 1;
-  }
-  100%{
-      opacity: 0;
-      transform: rotate(15deg) translate(20px,20px);
-  }
-}
 
 @media (max-width: 800px) {
   .collaborations {
