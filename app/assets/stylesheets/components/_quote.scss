@@ -1,25 +1,27 @@
 .quote {
-  width: 110vh;
-  height: 90vh;
+  margin: 0 auto;
+  display: flex;
+  width: 1000px;
+  height: 100vh;
   padding: 160px;
   background: white;
   box-shadow: rgba(0, 0, 0, 0.15) 3.95px 3.95px 4.6px;
-  position: relative;
-
+  flex-direction: column;
+align-items: center;
   h2 {
     text-align: center;
   }
-}
-.quote-image {
-  width: 70%;
-  height: 90vh;
-  position: absolute;
-  right: 0px;
-  opacity: 80%;
+  input, label{
+    width: 400px;
+  }
+  .bouton-moyen{
+    width: auto;
+  }
+
 }
 
 
-.form-control{
+.form-control {
   border-style: none;
   border-bottom: solid 1px grey;
   background-color: rgba(128, 128, 128, 0.078);
@@ -29,4 +31,22 @@
 
 .form-wrapper {
   margin-top: 50px;
+}
+
+.banner-quote {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(quote);
+  width: 100vw;
+  height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  h1 {
+    color: $white;
+    margin-top: 120px;
+  }
 }
