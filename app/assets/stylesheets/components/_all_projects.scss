@@ -16,3 +16,14 @@
 .all-projects:hover {
   transform: scale(1.02);
 }
+
+.freelancers-projects {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  a {
+    text-decoration: none;
+    color: $gray;
+  }
+}
