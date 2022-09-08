@@ -1,14 +1,16 @@
 <%# ---------------BANNER------------ %>
-<h1>Some projects selected for you by PASSENGERS!</h1>
-<h2> Hello <%= @user.first_name %>! Take a look at this awesome selection of projects!</h2>
+<div class="all-projects-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path 'all_projects3.jpg' %>);">
+  <h1>Some projects selected for you by Passengers</h1>
+</div>
 <%# ---------------BANNER------------ %>
-<div class="cartes">
+<div class="all-projects-container" id="all">
+  <%# <h2>Take a look at this awesome selection of projects!</h2> %>
   <%  @projects.each do |project| %>
-    <%= link_to project_path(project) do %>
-      <div class="carte">
+    <div class="freelance-projects">
+      <%= link_to project_path(project) do %>
         <h3><%= project.title %></h3>
         <p><%= project.description %></p>
-      </div>
     <% end %>
+    </div>
   <% end %>
 </div>

@@ -36,15 +36,15 @@
       <% if collaboration.status == 'pending' %>
         <div class="collaboration-pending">
           <div class="project-name"><%= collaboration.project.title.capitalize %></div>
-          <div class="title"><%= collaboration.title.capitalize %></div>  
-          <div class="price"><%= collaboration.total_price %>€</div>            
+          <div class="title"><%= collaboration.title.capitalize %></div>
+          <div class="price"><%= collaboration.total_price %>€</div>
           <div class="status"><%= collaboration.status.capitalize %></div>
         </div>
       <% else %>
         <div class="collaboration-accepted">
           <div class="project-name"><%= collaboration.project.title.capitalize %></div>
-          <div class="title"><%= collaboration.title.capitalize %></div> 
-          <div class="price"><%= collaboration.total_price %>€</div>             
+          <div class="title"><%= collaboration.title.capitalize %></div>
+          <div class="price"><%= collaboration.total_price %>€</div>
           <div class="status"><%= collaboration.status.capitalize %></div>
         </div>
       <% end %>
