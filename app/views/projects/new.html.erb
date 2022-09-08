@@ -4,12 +4,11 @@
   </div>
 </div>
 
-
-<div data-controller="display-second-question">
-  <div class="projectchoicebox">
-    <div class="imgprojectnew"></div>
+<div class="container">
+  <div data-controller="display-second-question">
     <%= simple_form_for @project do |f| %>
-      <h2>First of all is your project an update</h2> <h2>or a creation of a website?</h2>
+      <div class="projectchoicebox">
+        <h2>First of all is your project an update or a creation of a website?</h2>
         <div class="buttonbox1">
           <div class="changeradio">
             <%= f.input :origin,
@@ -22,12 +21,11 @@
                         label: false, input_html: { data: { action: "click->display-second-question#notQuestion"} } %>
           </div>
         </div>
-  </div>
+      </div>
 
-        <div class="d-none" data-display-second-question-target= "display">
-          <div class="centertext">
-            <h2><%= f.label(:website, "Ok you need a brand new website, but what type do you need?") %></h2>
-          </div>
+      <div class="d-none" data-display-second-question-target= "display">
+        <div class="website-center">
+          <h2>Ok you need a brand new website, but what type do you need?</h2>
           <div class="changeradio">
             <div class="flexradio">
               <%= f.input :website,
@@ -35,7 +33,8 @@
                           collection: ['One Page', 'Vitrine', 'E-shop under 10 items', 'E-shop over 10 items', 'WebApp'] %>
             </div>
           </div>
-          <div class="container">
+
+          <div class="new-project-container">
             <div class="describe">
               <h2>Describe your project and your needs in your own words:</h2>
             </div>
@@ -45,16 +44,14 @@
               <%= f.input :description,
                           as: :text,
                           required: true %>
+            <%= f.button :submit,
+                          "Submit your project",
+                          class: "bouton-moyen",
+                          id: "bouton-moyen-new-project" %>
             </div>
-              <%= f.button :submit,
-                            "Submit your project",
-                            class: "bouton-moyen",
-                            id: "bouton-moyen-new-project" %>
           </div>
         </div>
+      </div>
     <% end %>
+  </div>
 </div>
-
-
-
-<%= link_to "Accueil", root_path %>

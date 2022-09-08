@@ -53,7 +53,6 @@ class ProjectsController < ApplicationController
     when 'WebApp'
       @project.score_difficulty = 4
     end
-
     if @project.save
       redirect_to project_path(@project)
     else
