@@ -3,6 +3,9 @@
   width: 100%;
   background-color: $gray;
   padding-top: 10px;
+  bottom: 0;
+  min-height: 22vh;
+  margin-top: 30px;
   .copyright {
     margin-bottom:0;
     font-size:13px;
@@ -51,4 +54,3 @@
 .text-center {
   margin-top: 10px!important;
 }
-
