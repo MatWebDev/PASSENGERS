@@ -17,6 +17,7 @@
 
 .freelancer-card{  
  @include dimensions( 100%, 150px);
+  height: 300px;
   padding: 50px;
   background-color: white;
   position: relative;
@@ -67,12 +68,14 @@
   .profileinfo{
     padding: 0px 20px;
     display: flex;
+    justify-content: center;
     flex-direction: column;  
     p.bio{
       padding: 10px 0px;
       color: #5A5A5A;
       line-height: 1.2;
       font-style: initial;
+      margin-bottom: 0px;
     }  
   }
 
@@ -81,13 +84,22 @@
   }
 }
 
+.experience {
+  margin-bottom: 0px;
+  font-size: 18px;
+  font-weight: 400;
+
+  strong {
+    color: $orange;
+  }
+}
+
 .contact-btn {
   align-self: flex-end;
-  width: 150px;
   display: flex;
-  justify-content: space-between;
   color: white;
   font-size: 18px;
+  margin
 
   a {
     color: white;
@@ -122,6 +134,12 @@
 .collaborations {
   display: flex;
   flex-direction: row;
+
+  p {
+    font-size: 18px;
+    font-style: italic;
+    color: $red;
+  }
 }
 
 .collaboration-pending {
