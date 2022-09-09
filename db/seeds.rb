@@ -86,7 +86,7 @@ user = User.new(
   # score_exp: 19
 )
 user.photo.attach(io: file, filename: 'mathieu.jpg', content_type: 'image/jpeg')
-user.save! 
+user.save!
 
 file = URI.open('https://avatars.githubusercontent.com/u/91216872?v=4')
 user = User.new(
@@ -272,7 +272,7 @@ puts 'Users created successfully man!'
 
 Project.create!(
   title: "Handmade Jewelry E-shop",
-  description: "I make handmade jewelry. My business is growing and I would like to sell my jewelry on my own sales website. I need a website as soon as possible. 
+  description: "I make handmade jewelry. My business is growing and I would like to sell my jewelry on my own sales website. I need a website as soon as possible.
   Please contact me for any further informations.",
   origin: "Creation",
   website: "E-shop under 10 items",
@@ -282,7 +282,7 @@ Project.create!(
 
 Project.create!(
   title: "Showcase website for Locksmith",
-  description: "I am a locksmith in Marseille, I have a shop but I would like to extend my activity throughout the region. 
+  description: "I am a locksmith in Marseille, I have a shop but I would like to extend my activity throughout the region.
   So I would like to have a site to show my activity on the internet and find new customer.",
   origin: "Creation",
   website: "Vitrine",
@@ -307,7 +307,7 @@ Collaboration.create!(
   title: "Key of success for your business!",
   total_price: 1500,
   project_id: Project.find_by(title: "Showcase website for Locksmith").id,
-  user_id: User.find_by(first_name: 'Mathieu').id,
+  user_id: User.find_by(first_name: 'Jérome').id,
   status: 'pending'
 )
 
@@ -315,7 +315,7 @@ Collaboration.create!(
   title: "Boost your jewels!",
   total_price: 3000,
   project_id: Project.find_by(title: "Handmade Jewelry E-shop").id,
-  user_id: User.find_by(first_name: 'Mathieu').id,
+  user_id: User.find_by(first_name: 'Jérome').id,
   status: 'accepted'
 )
 
